@@ -1,0 +1,2610 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CCM - Conversor de Criptomoedas</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810860129805536"
+     crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+      <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="CMM Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-text-full" data-translate="brandName">Conversor de</span>
+                    <span class="brand-text-full highlight" data-translate="brandHighlight">Criptomoedas</span>
+                    <span class="brand-text-short highlight">CCM</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-translate="menuInicio">Início</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre" data-translate="menuSobre">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq" data-translate="menuFaq">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato" data-translate="menuContato">Contato</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i> <span data-translate="menuIdioma">Idioma</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" data-lang="pt"><img src="https://flagcdn.com/24x18/br.png" alt="Português" class="me-2" height="12">Português</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/24x18/gb.png" alt="English" class="me-2" height="12">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/24x18/es.png" alt="Español" class="me-2" height="12">Español</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <span data-translate="heroTitle">Conversor de</span>
+                <span class="text-white" data-translate="heroCrypto">Criptomoedas</span>
+            </h1>
+            <p class="lead mb-0" data-translate="heroSubtitle">Confira o valor da sua criptomoeda em qualquer outra moeda tradicional!</p>
+        </div>
+    </section>
+
+    <!-- Converter Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="converter-card">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="crypto-input">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/bitcoin.png" alt="Bitcoin" class="crypto-icon" id="from-crypto-img">
+                                <select class="crypto-select" id="from-crypto">
+                                    <option value="BTC"  data-img="img/bitcoin.png">Bitcoin (BTC)</option>
+                                    <option value="ETH" data-img="img/ethereum-eth-logo.png">Ethereum (ETH)</option>
+                                    <option value="USDT" data-img="img/tether.png">Tether (USDT)</option>
+                                    <option value="BNB"  data-img="img/bnb.png">Binance Coin (BNB)</option>
+                                    <option value="ADA"  data-img="img/ada.png">Cardano (ADA)</option>
+                                    <option value="XRP" data-img="img/xrp.png">XRP (XRP)</option>
+                                    <option value="SOL"  data-img="img/solana.jpeg">Solana (SOL)</option>
+                                    <option value="DOT" data-img="img/polkadot.png">Polkadot (DOT)</option>
+                                    <option value="DOGE" data-img="img/dogecoin.png">Dogecoin (DOGE)</option>
+                                    <option value="MATIC" data-img="img/Matic.png">Polygon (MATIC)</option>
+                                    <option value="LINK" data-img="img/chainlink.png">Chainlink (LINK)</option>
+                                    <option value="UNI" data-img="img/uniswap.png">Uniswap (UNI)</option>
+                                    <option value="AVAX" data-img="img/AVAX.png">Avalanche (AVAX)</option>
+                                    <option value="ATOM" data-img="img/cosmos.png">Cosmos (ATOM)</option>
+                                    <option value="LTC" data-img="img/litecoin.png">Litecoin (LTC)</option>
+                                    <option value="FTM" data-img="img/fantom.png">Fantom (FTM)</option>
+                                    <option value="NEAR" data-img="img/NEAR.png">NEAR Protocol (NEAR)</option>
+                                    <option value="ALGO" data-img="img/algorand.png">Algorand (ALGO)</option>
+                                    <option value="VET" data-img="img/vechain.png">VeChain (VET)</option>
+                                    <option value="FIL" data-img="img/filecoin.png">Filecoin (FIL)</option>
+                                </select>
+                            </div>
+                            <input type="text" class="form-control form-control-lg" placeholder="0,00 ou 0.00" id="crypto-amount">
+                            <div class="text-muted mt-2">
+                                <small>1 BTC ≈ $61,843.00</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2 d-flex align-items-center justify-content-center my-3 my-md-0">
+                        <div class="swap-icon" id="swap-btn">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-5">
+                        <div class="crypto-output">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png" alt="USD" class="crypto-icon" id="to-currency-img">
+                                <select class="crypto-select" id="to-currency">
+                                    <option value="USD" data-img="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png">Dólar Americano (USD)</option>
+                                    <option value="EUR" data-img="https://www.countryflags.com/wp-content/uploads/europe-flag-jpg-xl.jpg">Euro (EUR)</option>
+                                    <option value="GBP" data-img="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png">Libra Esterlina (GBP)</option>
+                                    <option value="JPY" data-img="https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png">Iene Japonês (JPY)</option>
+                                    <option value="AOA" data-img="https://flagcdn.com/w160/ao.png">Kwanza Angolano (AOA)</option>
+                                    <option value="CAD" data-img="https://www.countryflags.com/wp-content/uploads/canada-flag-png-large.png">Dólar Canadense (CAD)</option>
+                                    <option value="AUD" data-img="https://www.countryflags.com/wp-content/uploads/australia-flag-png-large.png">Dólar Australiano (AUD)</option>
+                                    <option value="CHF" data-img="https://www.countryflags.com/wp-content/uploads/switzerland-flag-png-large.png">Franco Suíço (CHF)</option>
+                                    <option value="CNY" data-img="https://www.countryflags.com/wp-content/uploads/china-flag-png-large.png">Yuan Chinês (CNY)</option>
+                                    <option value="BRL" data-img="https://www.countryflags.com/wp-content/uploads/brazil-flag-png-large.png">Real Brasileiro (BRL)</option>
+                                    <option value="INR" data-img="https://www.countryflags.com/wp-content/uploads/india-flag-png-large.png">Rupia Indiana (INR)</option>
+                                    <option value="KRW" data-img="https://www.countryflags.com/wp-content/uploads/south-korea-flag-png-large.png">Won Sul-Coreano (KRW)</option>
+                                    <option value="RUB" data-img="https://www.countryflags.com/wp-content/uploads/russia-flag-png-large.png">Rublo Russo (RUB)</option>
+                                    <option value="ZAR" data-img="https://www.countryflags.com/wp-content/uploads/south-africa-flag-png-large.png">Rand Sul-Africano (ZAR)</option>
+                                    <option value="MXN" data-img="https://www.countryflags.com/wp-content/uploads/mexico-flag-png-large.png">Peso Mexicano (MXN)</option>
+                                    <option value="SGD" data-img="https://www.countryflags.com/wp-content/uploads/singapore-flag-png-large.png">Dólar de Singapura (SGD)</option>
+                                    <option value="AED" data-img="https://www.countryflags.com/wp-content/uploads/united-arab-emirates-flag-png-large.png">Dirham dos EAU (AED)</option>
+                                    <option value="NZD" data-img="https://www.countryflags.com/wp-content/uploads/new-zealand-flag-png-large.png">Dólar Neozelandês (NZD)</option>
+                                    <option value="TRY" data-img="https://www.countryflags.com/wp-content/uploads/turkey-flag-png-large.png">Lira Turca (TRY)</option>
+                                    <option value="SEK" data-img="https://www.countryflags.com/wp-content/uploads/sweden-flag-png-large.png">Coroa Sueca (SEK)</option>
+                                </select>
+                            </div>
+                            <input type="text" class="form-control form-control-lg" placeholder="0,00" id="currency-amount" readonly>
+                            <div class="text-muted mt-2">
+                                <small id="lastUpdateTime"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-lg px-5 convert-btn" id="convert-btn">Converter Agora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Chart Section -->
+    <section class="chart-section" id="chart-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" data-translate="historico">HISTÓRICO DE FLUTUAÇÕES DAS CRIPTOMOEDAS</h2>
+                <p class="text-muted" data-translate="acompanhe">Acompanhe o desempenho das principais criptomoedas ao longo do tempo</p>
+            </div>
+            
+            <div class="chart-container">
+                <!-- Skeleton Loading para o Gráfico -->
+                <div id="chart-skeleton">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="skeleton skeleton-text" style="width: 200px;"></div>
+                        <div class="d-flex gap-2">
+                            <div class="skeleton skeleton-text" style="width: 50px;"></div>
+                            <div class="skeleton skeleton-text" style="width: 50px;"></div>
+                            <div class="skeleton skeleton-text" style="width: 50px;"></div>
+                            <div class="skeleton skeleton-text" style="width: 50px;"></div>
+                    </div>
+                    </div>
+                    <div class="skeleton skeleton-chart"></div>
+                </div>
+                
+                <!-- Gráfico Real -->
+                <div id="chart-real" class="hide-skeleton">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="mb-0" data-translate="chartTitle">Bitcoin para USD - Últimos 30 dias</h5>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-primary" data-period="7" data-translate="chartPeriod7D">7D</button>
+                            <button class="btn btn-sm btn-primary" data-period="30" data-translate="chartPeriod30D">30D</button>
+                            <button class="btn btn-sm btn-outline-primary" data-period="90" data-translate="chartPeriod3M">3M</button>
+                            <button class="btn btn-sm btn-outline-primary" data-period="365" data-translate="chartPeriod1A">1A</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="cryptoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticker Section -->
+    <section class="ticker-container">
+        <!-- Skeleton Loading para o Ticker -->
+        <div class="skeleton-ticker" id="ticker-skeleton">
+            <!-- Repetir 5 vezes para criar um efeito de movimento -->
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <!-- Duplicar os items para criar efeito contínuo -->
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+            <div class="skeleton-ticker-item">
+                <div class="skeleton skeleton-symbol"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-change"></div>
+            </div>
+        </div>
+        
+        <!-- Ticker Real -->
+        <div class="ticker hide-skeleton" id="ticker-real">
+            <!-- Ticker items serão inseridos dinamicamente via JavaScript -->
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="py-5" id="sobre">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" data-translate="sobreNosTitle">Sobre Nós</h2>
+                    <p class="lead" data-translate="sobreNosLead">Oferecemos uma plataforma simples e segura para converter criptomoedas em moedas tradicionais.</p>
+                    <p data-translate="sobreNosMissao">Nossa missão é facilitar a transação e a conversão de ativos digitais, oferecendo uma experiência rápida e transparente.</p>
+                    <div class="d-flex mt-4">
+                        <div class="me-4">
+                            <h5 class="fw-bold" data-translate="segurancaTitle">Segurança Garantida</h5>
+                            <p data-translate="segurancaDesc">Todas as consultas de conversão são protegidas por criptografia.</p>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold" data-translate="taxasTitle">Taxas em Tempo Real</h5>
+                            <p data-translate="taxasDesc">Oferecemos as taxas de câmbio mais precisas do mercado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-3" data-translate="nossosServicos">Nossos Serviços</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-exchange-alt text-primary fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1" data-translate="servicoConversao">Conversão de criptomoedas para moedas fiat</h5>
+                                            <p class="text-muted mb-0" data-translate="servicoConversaoDesc">Converta facilmente entre mais de 20 criptomoedas e moedas tradicionais.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-chart-line text-primary fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1" data-translate="servicoTaxas">Taxas de câmbio em tempo real</h5>
+                                            <p class="text-muted mb-0" data-translate="servicoTaxasDesc">Acesse as taxas mais atualizadas do mercado em tempo real.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-bolt text-primary fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1" data-translate="servicoRapido">Conversões rápidas e seguras</h5>
+                                            <p class="text-muted mb-0" data-translate="servicoRapidoDesc">Obtenha os valores convertidos instantaneamente.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="fas fa-headset text-primary fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1" data-translate="servicoSuporte">Suporte ao cliente 24/7</h5>
+                                            <p class="text-muted mb-0" data-translate="servicoSuporteDesc">Nossa equipe está sempre disponível para ajudar.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light" id="faq">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" data-translate="perguntasFrequentes">Perguntas Frequentes</h2>
+                <p class="text-muted" data-translate="faqSubtitle">Encontre respostas para as dúvidas mais comuns sobre o nosso site</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" data-translate="faqPergunta1">
+                                    Como converter criptomoedas para moedas tradicionais?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-translate="faqResposta1">
+                                    Para converter criptomoedas em moedas tradicionais, basta acessar a página de conversão do nosso site, selecionar a criptomoeda que deseja trocar e inserir o valor. O site irá calcular a conversão automaticamente com base na taxa de câmbio em tempo real, e você verá o valor equivalente na moeda tradicional escolhida.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" data-translate="faqPergunta2">
+                                    Quais criptomoedas posso converter?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-translate="faqResposta2">
+                                    Atualmente, você pode converter as seguintes criptomoedas para moedas tradicionais: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), e outras criptomoedas populares. Se você tiver dúvidas sobre criptomoedas específicas, consulte nossa página de conversão para verificar as opções disponíveis.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" data-translate="faqPergunta3">
+                                    Qual é a taxa de câmbio utilizada no site?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-translate="faqResposta3">
+                                    Nosso site utiliza taxas de câmbio em tempo real obtidas das principais bolsas de criptomoedas e fontes confiáveis do mercado financeiro. As taxas são atualizadas constantemente para garantir a precisão das conversões. Observe que as taxas podem variar ligeiramente entre diferentes plataformas de troca.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" data-translate="faqPergunta4">
+                                    Como posso entrar em contato caso precise de ajuda?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-translate="faqResposta4">
+                                    Se você tiver alguma dúvida ou problema ao usar o nosso site, entre em contato com nossa equipe de suporte através do e-mail suporte@seusite.com ou pelos telefones +351 932 076 103 | +244 938 413 737. Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar com qualquer questão relacionada ao nosso serviço.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 data-translate="footerLinksUteis">Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" data-translate="menuInicio">Início</a></li>
+                        <li><a href="#sobre" data-translate="menuSobre">Sobre Nós</a></li>
+                        <li><a href="#faq" data-translate="menuFaq">FAQ</a></li>
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#foundersModal" data-translate="footerFundadores">Fundadores</a></li>
+                        <li><a data-translate='footerPrivacidade' href='/privacidade' target='_blank'>Política de Privacidade</a></li>
+                        <li><a data-translate='footerTermos' href='/termos' target='_blank'>Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 data-translate="footerSuporte">Suporte</h5>
+                    <ul class="list-unstyled">
+                        <li><a data-translate='footerAjuda' href='/ajuda' target='_blank'>Centro de Ajuda</a></li>
+                        <li><a href="#contato" data-translate="menuContato">Contato</a></li>
+                       
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 data-translate="footerContato">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> conversor.cripto@gmail.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> +351 932 076 103
+                        </li>
+                        <li>
+                            <i class="fas fa-phone me-2"></i> +244 938 413 737
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 data-translate="footerRedesSociais">Redes Sociais</h5>
+                    <div class="social-icons-row">
+                        <a href="#" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    <p class="small mt-3" data-translate="footerSigaNos">Siga-nos nas redes sociais para novidades.</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="small">
+                        <strong data-translate="footerAvisoLegal">Aviso Legal:</strong>
+                        <span data-translate="footerAvisoLegalTexto">As taxas de câmbio podem variar dependendo do momento da transação. Certifique-se de revisar as taxas antes de concluir qualquer operação. Não nos responsabilizamos por perdas devido a flutuações de mercado.</span>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="small" data-translate="footerDireitos">© 2025 CCM - Todos os direitos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button for Small Screens -->
+    <div class="floating-action-btn" id="floatingActionBtn" style="display: block !important; opacity: 1 !important; transform: scale(1) !important; position: fixed !important; bottom: 15px !important; right: 15px !important; z-index: 9999 !important; visibility: visible !important; pointer-events: auto !important;">
+        <button class="fab-main" aria-label="Menu de opções" style="display: flex !important; align-items: center !important; justify-content: center !important;">
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="fab-options">
+            <a href="#" class="fab-option" title="Início">
+                <i class="bi bi-house-fill"></i>
+            </a>
+            <a href="#chart-section" class="fab-option" title="Gráficos">
+                <i class="bi bi-graph-up"></i>
+            </a>
+            <a href="#sobre" class="fab-option" title="Sobre">
+                <i class="bi bi-info-circle-fill"></i>
+            </a>
+            <a href="#faq" class="fab-option" title="FAQ">
+                <i class="bi bi-question-circle-fill"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal dos Fundadores -->
+    <div class="modal fade" id="foundersModal" tabindex="-1" aria-labelledby="foundersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h3 class="modal-title fw-bold" data-translate="modalFundadoresTitle">Fundadores</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <div class="container-fluid px-4">
+                        <!-- Founders Cards -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="founder-card text-center p-3 h-100 rounded-3 shadow-sm">
+                                    <div class="founder-image-wrapper">
+                                        <img src="assets/img/joao.jpg" alt="João Canoquela" class="founder-image rounded-circle">
+                                    </div>
+                                    <div class="founder-info">
+                                        <h5 class="founder-name mb-1">João Canoquela</h5>
+                                        <p class="founder-title text-primary mb-2" data-translate="modalCeoTitle">Co-Fundador & CEO</p>
+                                        <div class="founder-social d-flex justify-content-center gap-2 mb-2">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="founder-card text-center p-3 h-100 rounded-3 shadow-sm">
+                                    <div class="founder-image-wrapper">
+                                        <img src="assets/img/domingos.jpg" alt="Domingos Canoquela" class="founder-image rounded-circle">
+                                    </div>
+                                    <div class="founder-info">
+                                        <h5 class="founder-name mb-1">Domingos Canoquela</h5>
+                                        <p class="founder-title text-primary mb-2" data-translate="modalCtoTitle">Co-Fundador & CTO</p>
+                                        <div class="founder-social d-flex justify-content-center gap-2 mb-2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Story Section -->
+                        <div class="founders-story mt-4 p-3 bg-light rounded-3">
+                            <h4 class="story-title fw-bold mb-3" data-translate="modalHistoriaTitle">Nossa História</h4>
+                            <div class="story-text-container">
+                                <p class="story-text mb-3" data-translate="modalHistoriaParagrafo1">
+                                    Nós, João Canoquela e Domingos Canoquela, criamos este projeto com um único objetivo: facilitar e revolucionar o processo de conversão de criptomoedas no mundo. Vimos que, apesar do crescimento acelerado do mercado cripto, muitos usuários ainda enfrentam dificuldades na conversão para moedas tradicionais de forma simples, rápida e segura.
+                                </p>
+                                <p class="story-text mb-3" data-translate="modalHistoriaParagrafo2">
+                                    Somos apaixonados por tecnologia, inovação e evolução. Acreditamos que o futuro financeiro será cada vez mais digital e queremos garantir que qualquer pessoa, independentemente da sua experiência com criptomoedas, possa acessar esse futuro sem barreiras.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.2.0/dist/chartjs-adapter-luxon.min.js"></script>
+    
+    <!-- Script para fixar o texto da marca em telas pequenas -->
+    <script>
+        function fixBrandText() {
+            // Verifica se a tela é menor que 361px
+            if (window.innerWidth <= 360) {
+                // Seleciona os elementos da marca
+                const navbarBrand = document.querySelector('.navbar-brand');
+                const brandText = document.querySelector('.brand-text');
+                
+                // Desativa transições para esses elementos
+                if (navbarBrand) {
+                    navbarBrand.style.transition = 'none';
+                    navbarBrand.style.animation = 'none';
+                    navbarBrand.style.transform = 'none';
+                }
+                
+                if (brandText) {
+                    brandText.style.transition = 'none';
+                    brandText.style.animation = 'none';
+                    brandText.style.transform = 'none';
+                }
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aplica ao carregar a página
+            fixBrandText();
+            
+            // Adiciona listener para o botão do menu
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler) {
+                navbarToggler.addEventListener('click', function() {
+                    // Garante que a marca permaneça fixa após o clique
+                    setTimeout(fixBrandText, 10);
+                });
+            }
+            
+            // Aplica quando a janela for redimensionada
+            window.addEventListener('resize', fixBrandText);
+        });
+    </script>
+    
+    <!-- Script para garantir que o FAB apareça em telas pequenas -->
+    <script>
+        // Função para forçar a exibição do FAB em telas pequenas
+        function forceShowFAB() {
+            if (window.innerWidth <= 360) {
+                console.log("Forçando exibição do FAB em tela pequena");
+                const fab = document.getElementById('floatingActionBtn');
+                if (fab) {
+                    fab.style.cssText = `
+                        display: block !important;
+                        opacity: 1 !important;
+                        transform: scale(1) !important;
+                        visibility: visible !important;
+                        pointer-events: auto !important;
+                        z-index: 9999 !important;
+                        bottom: 15px !important;
+                        right: 15px !important;
+                        position: fixed !important;
+                    `;
+                    console.log("FAB forçado a aparecer");
+                } else {
+                    console.log("FAB não encontrado pelo ID");
+                }
+                
+                // Ocultar navbar.style.display = 'none';
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    navbar.style.display = 'none';
+                    console.log("Navbar ocultado");
+                }
+            }
+        }
+        
+        // Executar imediatamente
+        forceShowFAB();
+        
+        // Executar após o carregamento do DOM
+        document.addEventListener('DOMContentLoaded', forceShowFAB);
+        
+        // Executar após um pequeno atraso
+        setTimeout(forceShowFAB, 500);
+        
+        // Executar quando a janela for redimensionada
+        window.addEventListener('resize', forceShowFAB);
+        
+        // Executar periodicamente para garantir
+        setInterval(forceShowFAB, 1000);
+    </script>
+    
+    <!-- Floating Action Button Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fabMain = document.querySelector('.fab-main');
+            const fabOptions = document.querySelector('.fab-options');
+            const floatingActionBtn = document.querySelector('.floating-action-btn');
+            const navbar = document.querySelector('.navbar');
+            
+            // Mostrar o botão flutuante e ocultar navbar em telas pequenas
+            function adjustForSmallScreens() {
+                console.log("Verificando tamanho da tela:", window.innerWidth);
+                
+                if (window.innerWidth <= 360) {
+                    console.log("Tela menor que 361px - Aplicando ajustes");
+                    
+                    // Mostrar o botão flutuante
+                    if (floatingActionBtn) {
+                        floatingActionBtn.style.display = 'block';
+                        floatingActionBtn.style.opacity = '1';
+                        floatingActionBtn.style.transform = 'scale(1)';
+                        console.log("FAB exibido");
+                    } else {
+                        console.log("FAB não encontrado");
+                    }
+                    
+                    // Ocultar a navbar.style.display = 'none';
+                    if (navbar) {
+                        navbar.style.display = 'none';
+                        console.log("Navbar ocultado");
+                    } else {
+                        console.log("Navbar não encontrado");
+                    }
+                    
+                    // Ajustar o hero para compensar a ausência da navbar.style.display = 'none';
+                    const hero = document.querySelector('.hero');
+                    if (hero) {
+                        hero.style.paddingTop = '2rem';
+                        hero.style.borderTopLeftRadius = '0';
+                        hero.style.borderTopRightRadius = '0';
+                    }
+                    
+                    // Forçar exibição do FAB diretamente no elemento
+                    document.getElementById('floatingActionBtn').style.display = 'block';
+                    document.getElementById('floatingActionBtn').style.opacity = '1';
+                    document.getElementById('floatingActionBtn').style.transform = 'scale(1)';
+                } else {
+                    // Restaurar a navbar em telas maiores
+                    if (navbar) {
+                        navbar.style.display = '';
+                    }
+                    
+                    // Restaurar o hero em telas maiores
+                    const hero = document.querySelector('.hero');
+                    if (hero) {
+                        hero.style.paddingTop = '';
+                        hero.style.borderTopLeftRadius = '';
+                        hero.style.borderTopRightRadius = '';
+                    }
+                }
+            }
+            
+            // Chamar a função ao carregar a página
+            adjustForSmallScreens();
+            
+            // Chamar a função quando a janela for redimensionada
+            window.addEventListener('resize', adjustForSmallScreens);
+            
+            // Forçar a verificação após um pequeno atraso para garantir que todos os elementos estejam carregados
+            setTimeout(adjustForSmallScreens, 500);
+            
+            if (fabMain) {
+                fabMain.addEventListener('click', function() {
+                    fabOptions.classList.toggle('show');
+                });
+                
+                // Close when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.floating-action-btn') && fabOptions.classList.contains('show')) {
+                        fabOptions.classList.remove('show');
+                    }
+                });
+                
+                // Close after clicking an option
+                const fabOptionLinks = document.querySelectorAll('.fab-option');
+                fabOptionLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        fabOptions.classList.remove('show');
+                    });
+                });
+            }
+        });
+    </script>
+    
+    <!-- Language Translations -->
+    <script>
+        const translations = {
+            pt: {
+                // navbar.style.display = 'none';
+                inicio: "Início",
+                sobreNos: "Sobre Nós",
+                faq: "FAQ",
+                contato: "Contato",
+                idioma: "Idioma",
+
+                // Hero Section
+                conversorTitle: "Conversor de Criptomoedas",
+                conversorSubtitle: "Confira o valor da sua criptomoeda em qualquer outra moeda tradicional!",
+
+                // Converter Section
+                converterAgora: "Converter Agora",
+                taxaAtualizada: "Taxa de câmbio atualizada há 2 minutos",
+
+                // Cryptocurrencies
+                bitcoin: "Bitcoin (BTC)",
+                ethereum: "Ethereum (ETH)",
+                tether: "Tether (USDT)",
+                binanceCoin: "Binance Coin (BNB)",
+                cardano: "Cardano (ADA)",
+                xrp: "XRP (XRP)",
+                solana: "Solana (SOL)",
+                polkadot: "Polkadot (DOT)",
+                dogecoin: "Dogecoin (DOGE)",
+                polygon: "Polygon (MATIC)",
+                chainlink: "Chainlink (LINK)",
+                uniswap: "Uniswap (UNI)",
+                avalanche: "Avalanche (AVAX)",
+                cosmos: "Cosmos (ATOM)",
+                litecoin: "Litecoin (LTC)",
+                fantom: "Fantom (FTM)",
+                near: "NEAR Protocol (NEAR)",
+                algorand: "Algorand (ALGO)",
+                vechain: "VeChain (VET)",
+                filecoin: "Filecoin (FIL)",
+
+                // Traditional Currencies
+                dolarAmericano: "Dólar Americano (USD)",
+                euro: "Euro (EUR)",
+                libraEsterlina: "Libra Esterlina (GBP)",
+                ieneJapones: "Iene Japonês (JPY)",
+                kwanzaAngolano: "Kwanza Angolano (AOA)",
+                dolarCanadense: "Dólar Canadense (CAD)",
+                dolarAustraliano: "Dólar Australiano (AUD)",
+                francoSuico: "Franco Suíço (CHF)",
+                yuanChines: "Yuan Chinês (CNY)",
+                realBrasileiro: "Real Brasileiro (BRL)",
+                rupiaIndiana: "Rupia Indiana (INR)",
+                wonSulCoreano: "Won Sul-Coreano (KRW)",
+                rubloRusso: "Rublo Russo (RUB)",
+                randSulAfricano: "Rand Sul-Africano (ZAR)",
+                pesoMexicano: "Peso Mexicano (MXN)",
+                dolarSingapura: "Dólar de Singapura (SGD)",
+                dirhamEAU: "Dirham dos EAU (AED)",
+                dolarNeozelandes: "Dólar Neozelandês (NZD)",
+                liraTurca: "Lira Turca (TRY)",
+                coroaSueca: "Coroa Sueca (SEK)",
+
+                // Chart Section
+                historico: "HISTÓRICO DE FLUTUAÇÕES DAS CRIPTOMOEDAS",
+                acompanhe: "Acompanhe o desempenho das principais criptomoedas ao longo do tempo",
+
+                // Footer
+                linksUteis: "Links Úteis",
+                suporte: "Suporte",
+                redesSociais: "Redes Sociais",
+                fundadores: "Fundadores",
+                politicaPrivacidade: "Política de Privacidade",
+                termosServico: "Termos de Serviço",
+                centroAjuda: "Centro de Ajuda",
+                reportarProblema: "Reportar um Problema",
+                sigaNos: "Siga-nos nas redes sociais para novidades.",
+                avisoLegal: "Aviso Legal:",
+                avisoLegalTexto: "As taxas de câmbio podem variar dependendo do momento da transação. Certifique-se de revisar as taxas antes de concluir qualquer operação. Não nos responsabilizamos por perdas devido a flutuações de mercado.",
+                direitosReservados: "© 2025 CCM - Todos os direitos reservados",
+
+                // About Section
+                sobreNosTitle: "Sobre Nós",
+                sobreNosLead: "Oferecemos uma plataforma simples e segura para converter criptomoedas em moedas tradicionais.",
+                sobreNosMissao: "Nossa missão é facilitar a transação e a conversão de ativos digitais, oferecendo uma experiência rápida e transparente.",
+                segurancaTitle: "Segurança Garantida",
+                segurancaDesc: "Todas as consultas de conversão são protegidas por criptografia.",
+                taxasTitle: "Taxas em Tempo Real",
+                taxasDesc: "Oferecemos as taxas de câmbio mais precisas do mercado.",
+                nossosServicos: "Nossos Serviços",
+                servicoConversao: "Conversão de criptomoedas para moedas fiat",
+                servicoConversaoDesc: "Converta facilmente entre mais de 20 criptomoedas e moedas tradicionais.",
+                servicoTaxas: "Taxas de câmbio em tempo real",
+                servicoTaxasDesc: "Acesse as taxas mais atualizadas do mercado em tempo real.",
+                servicoRapido: "Conversões rápidas e seguras",
+                servicoRapidoDesc: "Obtenha os valores convertidos instantaneamente.",
+                servicoSuporte: "Suporte ao cliente 24/7",
+                servicoSuporteDesc: "Nossa equipe está sempre disponível para ajudar.",
+
+                // FAQ Section
+                perguntasFrequentes: "Perguntas Frequentes",
+                faqSubtitle: "Encontre respostas para as dúvidas mais comuns sobre o nosso site",
+                faqPergunta1: "Como converter criptomoedas para moedas tradicionais?",
+                faqResposta1: "Para converter criptomoedas em moedas tradicionais, basta acessar a página de conversão do nosso site, selecionar a criptomoeda que deseja trocar e inserir o valor. O site irá calcular a conversão automaticamente com base na taxa de câmbio em tempo real, e você verá o valor equivalente na moeda tradicional escolhida.",
+                faqPergunta2: "Quais criptomoedas posso converter?",
+                faqResposta2: "Atualmente, você pode converter as seguintes criptomoedas para moedas tradicionais: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), e outras criptomoedas populares. Se você tiver dúvidas sobre criptomoedas específicas, consulte nossa página de conversão para verificar as opções disponíveis.",
+                faqPergunta3: "Qual é a taxa de câmbio utilizada no site?",
+                faqResposta3: "Nosso site utiliza taxas de câmbio em tempo real obtidas das principais bolsas de criptomoedas e fontes confiáveis do mercado financeiro. As taxas são atualizadas constantemente para garantir a precisão das conversões. Observe que as taxas podem variar ligeiramente entre diferentes plataformas de troca.",
+                faqPergunta4: "Como posso entrar em contato caso precise de ajuda?",
+                faqResposta4: "Se você tiver alguma dúvida ou problema ao usar o nosso site, entre em contato com nossa equipe de suporte através do e-mail suporte@seusite.com ou pelos telefones +351 932 076 103 | +244 938 413 737. Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar com qualquer questão relacionada ao nosso serviço.",
+
+                // Chart Section
+                chartTitle: "Bitcoin para USD - Últimos 30 dias",
+                chartPeriod7D: "7 dias",
+                chartPeriod30D: "30 dias",
+                chartPeriod3M: "3 meses",
+                chartPeriod1A: "1 ano",
+
+                // Footer
+                fundadores: "Fundadores",
+                nossaHistoria: "Nossa História",
+                historiaTexto1: "Nós, João Canoquela e Domingos Canoquela, criamos este projeto com um único objetivo: facilitar e revolucionar o processo de conversão de criptomoedas no mundo. Vimos que, apesar do crescimento acelerado do mercado cripto, muitos usuários ainda enfrentam dificuldades na conversão para moedas tradicionais de forma simples, rápida e segura.",
+                historiaTexto2: "Somos apaixonados por tecnologia, inovação e evolução. Acreditamos que o futuro financeiro será cada vez mais digital e queremos garantir que qualquer pessoa, independentemente da sua experiência com criptomoedas, possa acessar esse futuro sem barreiras.",
+                historiaTexto3: "Nossa jornada começou ao percebermos como o mercado cripto ainda era complexo para muitos. Analisamos os desafios, estudamos as necessidades reais dos usuários e desenvolvemos uma plataforma que não apenas soluciona esses problemas, mas também torna a experiência mais eficiente e intuitiva.",
+                historiaTexto4: "Mais do que um negócio, este é um compromisso com a inovação e a liberdade financeira. Nossa missão é eliminar fronteiras financeiras e tornar a conversão de criptomoedas acessível a todos.",
+
+                // Brand and Menu
+                brandName: "Conversor de",
+                brandHighlight: "Criptomoedas",
+                menuInicio: "Início",
+                menuSobre: "Sobre Nós",
+                menuFaq: "FAQ",
+                menuContato: "Contato",
+                menuIdioma: "Idioma",
+
+                // Footer
+                footerLinksUteis: "Links Úteis",
+                footerFundadores: "Fundadores",
+                footerPrivacidade: "Política de Privacidade",
+                footerTermos: "Termos de Serviço",
+                footerSuporte: "Suporte",
+                footerAjuda: "Centro de Ajuda",
+                footerReportar: "Reportar um Problema",
+                footerContato: "Contato",
+                footerRedesSociais: "Redes Sociais",
+                footerSigaNos: "Siga-nos nas redes sociais para novidades.",
+                footerAvisoLegal: "Aviso Legal:",
+                footerAvisoLegalTexto: "As taxas de câmbio podem variar dependendo do momento da transação. Certifique-se de revisar as taxas antes de concluir qualquer operação. Não nos responsabilizamos por perdas devido a flutuações de mercado.",
+                footerDireitos: "© 2025 CCM - Todos os direitos reservados",
+
+                // About Section
+                sobreNosTitle: "Sobre Nós",
+                sobreNosLead: "Oferecemos uma plataforma simples e segura para converter criptomoedas em moedas tradicionais.",
+                sobreNosMissao: "Nossa missão é facilitar a transação e a conversão de ativos digitais, oferecendo uma experiência rápida e transparente.",
+                segurancaTitle: "Segurança Garantida",
+                segurancaDesc: "Todas as consultas de conversão são protegidas por criptografia.",
+                taxasTitle: "Taxas em Tempo Real",
+                taxasDesc: "Oferecemos as taxas de câmbio mais precisas do mercado.",
+                nossosServicos: "Nossos Serviços",
+                servicoConversao: "Conversão de criptomoedas para moedas fiat",
+                servicoConversaoDesc: "Converta facilmente entre mais de 20 criptomoedas e moedas tradicionais.",
+                servicoTaxas: "Taxas de câmbio em tempo real",
+                servicoTaxasDesc: "Acesse as taxas mais atualizadas do mercado em tempo real.",
+                servicoRapido: "Conversões rápidas e seguras",
+                servicoRapidoDesc: "Obtenha os valores convertidos instantaneamente.",
+                servicoSuporte: "Suporte ao cliente 24/7",
+                servicoSuporteDesc: "Nossa equipe está sempre disponível para ajudar.",
+
+                // FAQ Section
+                perguntasFrequentes: "Perguntas Frequentes",
+                faqSubtitle: "Encontre respostas para as dúvidas mais comuns sobre o nosso site",
+                faqPergunta1: "Como converter criptomoedas para moedas tradicionais?",
+                faqResposta1: "Para converter criptomoedas em moedas tradicionais, basta acessar a página de conversão do nosso site, selecionar a criptomoeda que deseja trocar e inserir o valor. O site irá calcular a conversão automaticamente com base na taxa de câmbio em tempo real, e você verá o valor equivalente na moeda tradicional escolhida.",
+                faqPergunta2: "Quais criptomoedas posso converter?",
+                faqResposta2: "Atualmente, você pode converter as seguintes criptomoedas para moedas tradicionais: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), e outras criptomoedas populares. Se você tiver dúvidas sobre criptomoedas específicas, consulte nossa página de conversão para verificar as opções disponíveis.",
+                faqPergunta3: "Qual é a taxa de câmbio utilizada no site?",
+                faqResposta3: "Nosso site utiliza taxas de câmbio em tempo real obtidas das principais bolsas de criptomoedas e fontes confiáveis do mercado financeiro. As taxas são atualizadas constantemente para garantir a precisão das conversões. Observe que as taxas podem variar ligeiramente entre diferentes plataformas de troca.",
+                faqPergunta4: "Como posso entrar em contato caso precise de ajuda?",
+                faqResposta4: "Se você tiver alguma dúvida ou problema ao usar o nosso site, entre em contato com nossa equipe de suporte através do e-mail suporte@seusite.com ou pelos telefones +351 932 076 103 | +244 938 413 737. Estamos disponíveis 24 horas por dia, 7 dias por semana para ajudar com qualquer questão relacionada ao nosso serviço.",
+
+                // Chart Section
+                chartTitle: "Bitcoin para USD - Últimos 30 dias",
+                chartPeriod7D: "7 dias",
+                chartPeriod30D: "30 dias",
+                chartPeriod3M: "3 meses",
+                chartPeriod1A: "1 ano",
+
+                // Footer
+                fundadores: "Fundadores",
+                nossaHistoria: "Nossa História",
+                historiaTexto1: "Nós, João Canoquela e Domingos Canoquela, criamos este projeto com um único objetivo: facilitar e revolucionar o processo de conversão de criptomoedas no mundo. Vimos que, apesar do crescimento acelerado do mercado cripto, muitos usuários ainda enfrentam dificuldades na conversão para moedas tradicionais de forma simples, rápida e segura.",
+                historiaTexto2: "Somos apaixonados por tecnologia, inovação e evolução. Acreditamos que o futuro financeiro será cada vez mais digital e queremos garantir que qualquer pessoa, independentemente da sua experiência com criptomoedas, possa acessar esse futuro sem barreiras.",
+                historiaTexto3: "Nossa jornada começou ao percebermos como o mercado cripto ainda era complexo para muitos. Analisamos os desafios, estudamos as necessidades reais dos usuários e desenvolvemos uma plataforma que não apenas soluciona esses problemas, mas também torna a experiência mais eficiente e intuitiva.",
+                historiaTexto4: "Mais do que um negócio, este é um compromisso com a inovação e a liberdade financeira. Nossa missão é eliminar fronteiras financeiras e tornar a conversão de criptomoedas acessível a todos.",
+
+                // Brand and Menu
+                brandName: "Conversor de",
+                brandHighlight: "Criptomoedas",
+                menuInicio: "Início",
+                menuSobre: "Sobre Nós",
+                menuFaq: "FAQ",
+                menuContato: "Contato",
+                menuIdioma: "Idioma",
+
+                // Footer
+                footerLinksUteis: "Links Úteis",
+                footerFundadores: "Fundadores",
+                footerPrivacidade: "Política de Privacidade",
+                footerTermos: "Termos de Serviço",
+                footerSuporte: "Suporte",
+                footerAjuda: "Centro de Ajuda",
+                footerReportar: "Reportar um Problema",
+                footerContato: "Contato",
+                footerRedesSociais: "Redes Sociais",
+                footerSigaNos: "Siga-nos nas redes sociais para novidades.",
+                footerAvisoLegal: "Aviso Legal:",
+                footerAvisoLegalTexto: "As taxas de câmbio podem variar dependendo do momento da transação. Certifique-se de revisar as taxas antes de concluir qualquer operação. Não nos responsabilizamos por perdas devido a flutuações de mercado.",
+                footerDireitos: "© 2025 CCM - Todos os direitos reservados",
+
+                heroTitle: "Conversor de",
+                heroCrypto: "Criptomoedas",
+                heroSubtitle: "Confira o valor da sua criptomoeda em qualquer outra moeda tradicional!",
+
+                taxaAtualizadaEm: "Taxa atualizada em",
+                taxaAtualizadaHa: "Taxa atualizada há",
+                minutos: "minutos",
+                segundos: "segundos",
+                agora: "agora mesmo",
+
+                // Modal dos Fundadores
+                modalFundadoresTitle: "Nossos Fundadores",
+                modalCeoTitle: "Co-Fundador & CEO",
+                modalCtoTitle: "Co-Fundador & CTO",
+                modalHistoriaTitle: "Nossa História",
+                modalHistoriaParagrafo1: "Nós, João Canoquela e Domingos Canoquela, criamos este projeto com um único objetivo: facilitar e revolucionar o processo de conversão de criptomoedas no mundo. Vimos que, apesar do crescimento acelerado do mercado cripto, muitos usuários ainda enfrentam dificuldades na conversão para moedas tradicionais de forma simples, rápida e segura.",
+                modalHistoriaParagrafo2: "Somos apaixonados por tecnologia, inovação e evolução. Acreditamos que o futuro financeiro será cada vez mais digital e queremos garantir que qualquer pessoa, independentemente da sua experiência com criptomoedas, possa acessar esse futuro sem barreiras.",
+                modalHistoriaParagrafo3: "Nossa jornada começou ao percebermos como o mercado cripto ainda era complexo para muitos. Analisamos os desafios, estudamos as necessidades reais dos usuários e desenvolvemos uma plataforma que não apenas soluciona esses problemas, mas também torna a experiência mais eficiente e intuitiva.",
+                modalHistoriaParagrafo4: "Mais do que um negócio, este é um compromisso com a inovação e a liberdade financeira. Nossa missão é eliminar fronteiras financeiras e tornar a conversão de criptomoedas acessível a todos."
+            },
+            en: {
+                // navbar.style.display = 'none';
+                inicio: "Home",
+                sobreNos: "About Us",
+                faq: "FAQ",
+                contato: "Contact",
+                idioma: "Language",
+
+                // Hero Section
+                conversorTitle: "Cryptocurrency Converter",
+                conversorSubtitle: "Check the value of your cryptocurrency in any traditional currency!",
+
+                // Converter Section
+                converterAgora: "Convert Now",
+                taxaAtualizada: "Exchange rate updated 2 minutes ago",
+
+                // Cryptocurrencies
+                bitcoin: "Bitcoin (BTC)",
+                ethereum: "Ethereum (ETH)",
+                tether: "Tether (USDT)",
+                binanceCoin: "Binance Coin (BNB)",
+                cardano: "Cardano (ADA)",
+                xrp: "XRP (XRP)",
+                solana: "Solana (SOL)",
+                polkadot: "Polkadot (DOT)",
+                dogecoin: "Dogecoin (DOGE)",
+                polygon: "Polygon (MATIC)",
+                chainlink: "Chainlink (LINK)",
+                uniswap: "Uniswap (UNI)",
+                avalanche: "Avalanche (AVAX)",
+                cosmos: "Cosmos (ATOM)",
+                litecoin: "Litecoin (LTC)",
+                fantom: "Fantom (FTM)",
+                near: "NEAR Protocol (NEAR)",
+                algorand: "Algorand (ALGO)",
+                vechain: "VeChain (VET)",
+                filecoin: "Filecoin (FIL)",
+
+                // Traditional Currencies
+                dolarAmericano: "US Dollar (USD)",
+                euro: "Euro (EUR)",
+                libraEsterlina: "British Pound (GBP)",
+                ieneJapones: "Japanese Yen (JPY)",
+                kwanzaAngolano: "Angolan Kwanza (AOA)",
+                dolarCanadense: "Canadian Dollar (CAD)",
+                dolarAustraliano: "Australian Dollar (AUD)",
+                francoSuico: "Swiss Franc (CHF)",
+                yuanChines: "Chinese Yuan (CNY)",
+                realBrasileiro: "Brazilian Real (BRL)",
+                rupiaIndiana: "Indian Rupee (INR)",
+                wonSulCoreano: "South Korean Won (KRW)",
+                rubloRusso: "Russian Ruble (RUB)",
+                randSulAfricano: "South African Rand (ZAR)",
+                pesoMexicano: "Mexican Peso (MXN)",
+                dolarSingapura: "Singapore Dollar (SGD)",
+                dirhamEAU: "UAE Dirham (AED)",
+                dolarNeozelandes: "New Zealand Dollar (NZD)",
+                liraTurca: "Turkish Lira (TRY)",
+                coroaSueca: "Swedish Krona (SEK)",
+
+                // Chart Section
+                historico: "CRYPTOCURRENCY FLUCTUATION HISTORY",
+                acompanhe: "Track the performance of major cryptocurrencies over time",
+
+                // Footer
+                linksUteis: "Useful Links",
+                suporte: "Support",
+                redesSociais: "Social Media",
+                fundadores: "Founders",
+                politicaPrivacidade: "Privacy Policy",
+                termosServico: "Terms of Service",
+                centroAjuda: "Help Center",
+                reportarProblema: "Report a Problem",
+                sigaNos: "Follow us on social media for updates.",
+                avisoLegal: "Legal Notice:",
+                avisoLegalTexto: "Exchange rates may vary depending on the time of transaction. Make sure to review rates before completing any operation. We are not responsible for losses due to market fluctuations.",
+                direitosReservados: "© 2025 CCM - All rights reserved",
+
+                // About Section
+                sobreNosTitle: "About Us",
+                sobreNosLead: "We offer a simple and secure platform to convert cryptocurrencies into traditional currencies.",
+                sobreNosMissao: "Our mission is to facilitate the transaction and conversion of digital assets, offering a fast and transparent experience.",
+                segurancaTitle: "Guaranteed Security",
+                segurancaDesc: "All conversion queries are protected by encryption.",
+                taxasTitle: "Real-Time Rates",
+                taxasDesc: "We offer the most accurate exchange rates in the market.",
+                nossosServicos: "Our Services",
+                servicoConversao: "Cryptocurrency to fiat conversion",
+                servicoConversaoDesc: "Easily convert between more than 20 cryptocurrencies and traditional currencies.",
+                servicoTaxas: "Real-time exchange rates",
+                servicoTaxasDesc: "Access the most up-to-date market rates in real-time.",
+                servicoRapido: "Fast and secure conversions",
+                servicoRapidoDesc: "Get converted values instantly.",
+                servicoSuporte: "24/7 customer support",
+                servicoSuporteDesc: "Our team is always available to help.",
+
+                // FAQ Section
+                perguntasFrequentes: "Frequently Asked Questions",
+                faqSubtitle: "Find answers to the most common questions about our website",
+                faqPergunta1: "How to convert cryptocurrencies to traditional currencies?",
+                faqResposta1: "To convert cryptocurrencies to traditional currencies, simply access our website's conversion page, select the cryptocurrency you want to exchange, and enter the amount. The site will automatically calculate the conversion based on real-time exchange rates, and you'll see the equivalent value in your chosen traditional currency.",
+                faqPergunta2: "Which cryptocurrencies can I convert?",
+                faqResposta2: "Currently, you can convert the following cryptocurrencies to traditional currencies: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), and other popular cryptocurrencies. If you have questions about specific cryptocurrencies, check our conversion page to see the available options.",
+                faqPergunta3: "What exchange rate is used on the site?",
+                faqResposta3: "Our site uses real-time exchange rates obtained from major cryptocurrency exchanges and reliable financial market sources. Rates are constantly updated to ensure conversion accuracy. Note that rates may vary slightly between different exchange platforms.",
+                faqPergunta4: "How can I contact support if I need help?",
+                faqResposta4: "If you have any questions or issues using our website, contact our support team via email at support@yoursite.com or by phone at +351 932 076 103 | +244 938 413 737. We are available 24 hours a day, 7 days a week to help with any service-related questions.",
+
+                // Chart Section
+                chartTitle: "Bitcoin to USD - Last 30 days",
+                chartPeriod7D: "7 days",
+                chartPeriod30D: "30 days",
+                chartPeriod3M: "3 months",
+                chartPeriod1A: "1 year",
+
+                // Footer
+                fundadores: "Founders",
+                nossaHistoria: "Our Story",
+                historiaTexto1: "We, João Canoquela and Domingos Canoquela, created this project with a single goal: to facilitate and revolutionize the cryptocurrency conversion process worldwide. We saw that, despite the accelerated growth of the crypto market, many users still face difficulties in converting to traditional currencies in a simple, fast, and secure way.",
+                historiaTexto2: "We are passionate about technology, innovation, and evolution. We believe that the financial future will be increasingly digital, and we want to ensure that anyone, regardless of their experience with cryptocurrencies, can access this future without barriers.",
+                historiaTexto3: "Our journey began when we realized how complex the crypto market still was for many. We analyzed the challenges, studied users' real needs, and developed a platform that not only solves these problems but also makes the experience more efficient and intuitive.",
+                historiaTexto4: "More than a business, this is a commitment to innovation and financial freedom. Our mission is to eliminate financial borders and make cryptocurrency conversion accessible to all.",
+
+                // Brand and Menu
+                brandName: "Cryptocurrency",
+                brandHighlight: "Converter",
+                menuInicio: "Home",
+                menuSobre: "About Us",
+                menuFaq: "FAQ",
+                menuContato: "Contact",
+                menuIdioma: "Language",
+
+                // Footer
+                footerLinksUteis: "Useful Links",
+                footerFundadores: "Founders",
+                footerPrivacidade: "Privacy Policy",
+                footerTermos: "Terms of Service",
+                footerSuporte: "Support",
+                footerAjuda: "Help Center",
+                footerReportar: "Report a Problem",
+                footerContato: "Contact",
+                footerRedesSociais: "Social Media",
+                footerSigaNos: "Follow us on social media for updates.",
+                footerAvisoLegal: "Legal Notice:",
+                footerAvisoLegalTexto: "Exchange rates may vary depending on the time of transaction. Make sure to review rates before completing any operation. We are not responsible for losses due to market fluctuations.",
+                footerDireitos: "© 2025 CCM - All rights reserved",
+
+                heroTitle: "Cryptocurrency",
+                heroCrypto: "Converter",
+                heroSubtitle: "Check the value of your cryptocurrency in any traditional currency!",
+
+                taxaAtualizadaEm: "Rate updated at",
+                taxaAtualizadaHa: "Rate updated",
+                minutos: "minutes ago",
+                segundos: "seconds ago",
+                agora: "just now",
+
+                // Founders Modal
+                modalFundadoresTitle: "Our Founders",
+                modalCeoTitle: "Co-Founder & CEO",
+                modalCtoTitle: "Co-Founder & CTO",
+                modalHistoriaTitle: "Our Story",
+                modalHistoriaParagrafo1: "We, João Canoquela and Domingos Canoquela, created this project with a single goal: to facilitate and revolutionize the cryptocurrency conversion process worldwide. We saw that, despite the accelerated growth of the crypto market, many users still face difficulties in converting to traditional currencies in a simple, fast, and secure way.",
+                modalHistoriaParagrafo2: "We are passionate about technology, innovation, and evolution. We believe that the financial future will be increasingly digital, and we want to ensure that anyone, regardless of their experience with cryptocurrencies, can access this future without barriers.",
+                modalHistoriaParagrafo3: "Our journey began when we realized how complex the crypto market still was for many. We analyzed the challenges, studied users' real needs, and developed a platform that not only solves these problems but also makes the experience more efficient and intuitive.",
+                modalHistoriaParagrafo4: "More than a business, this is a commitment to innovation and financial freedom. Our mission is to eliminate financial borders and make cryptocurrency conversion accessible to all."
+            },
+            es: {
+                // navbar.style.display = 'none';
+                inicio: "Inicio",
+                sobreNos: "Sobre Nosotros",
+                faq: "FAQ",
+                contato: "Contacto",
+                idioma: "Idioma",
+
+                // Hero Section
+                conversorTitle: "Conversor de Criptomonedas",
+                conversorSubtitle: "¡Comprueba el valor de tu criptomoneda en cualquier moneda tradicional!",
+
+                // Converter Section
+                converterAgora: "Convertir Ahora",
+                taxaAtualizada: "Tipo de cambio actualizado hace 2 minutos",
+
+                // Cryptocurrencies
+                bitcoin: "Bitcoin (BTC)",
+                ethereum: "Ethereum (ETH)",
+                tether: "Tether (USDT)",
+                binanceCoin: "Binance Coin (BNB)",
+                cardano: "Cardano (ADA)",
+                xrp: "XRP (XRP)",
+                solana: "Solana (SOL)",
+                polkadot: "Polkadot (DOT)",
+                dogecoin: "Dogecoin (DOGE)",
+                polygon: "Polygon (MATIC)",
+                chainlink: "Chainlink (LINK)",
+                uniswap: "Uniswap (UNI)",
+                avalanche: "Avalanche (AVAX)",
+                cosmos: "Cosmos (ATOM)",
+                litecoin: "Litecoin (LTC)",
+                fantom: "Fantom (FTM)",
+                near: "NEAR Protocol (NEAR)",
+                algorand: "Algorand (ALGO)",
+                vechain: "VeChain (VET)",
+                filecoin: "Filecoin (FIL)",
+
+                // Traditional Currencies
+                dolarAmericano: "Dólar Estadounidense (USD)",
+                euro: "Euro (EUR)",
+                libraEsterlina: "Libra Esterlina (GBP)",
+                ieneJapones: "Yen Japonés (JPY)",
+                kwanzaAngolano: "Kwanza Angoleño (AOA)",
+                dolarCanadense: "Dólar Canadiense (CAD)",
+                dolarAustraliano: "Dólar Australiano (AUD)",
+                francoSuico: "Franco Suizo (CHF)",
+                yuanChines: "Yuan Chino (CNY)",
+                realBrasileiro: "Real Brasileño (BRL)",
+                rupiaIndiana: "Rupia India (INR)",
+                wonSulCoreano: "Won Surcoreano (KRW)",
+                rubloRusso: "Rublo Ruso (RUB)",
+                randSulAfricano: "Rand Sudafricano (ZAR)",
+                pesoMexicano: "Peso Mexicano (MXN)",
+                dolarSingapura: "Dólar de Singapur (SGD)",
+                dirhamEAU: "Dírham de EAU (AED)",
+                dolarNeozelandes: "Dólar Neozelandés (NZD)",
+                liraTurca: "Lira Turca (TRY)",
+                coroaSueca: "Corona Sueca (SEK)",
+
+                // Chart Section
+                historico: "HISTORIAL DE FLUCTUACIONES DE CRIPTOMONEDAS",
+                acompanhe: "Sigue el rendimiento de las principales criptomonedas a lo largo del tiempo",
+
+                // Footer
+                linksUteis: "Enlaces Útiles",
+                suporte: "Soporte",
+                redesSociais: "Redes Sociales",
+                fundadores: "Fundadores",
+                politicaPrivacidade: "Política de Privacidad",
+                termosServico: "Términos de Servicio",
+                centroAjuda: "Centro de Ayuda",
+                reportarProblema: "Reportar un Problema",
+                sigaNos: "Síguenos en redes sociales para novedades.",
+                avisoLegal: "Aviso Legal:",
+                avisoLegalTexto: "Los tipos de cambio pueden variar según el momento de la transacción. Asegúrese de revisar las tasas antes de completar cualquier operación. No nos hacemos responsables por pérdidas debido a fluctuaciones del mercado.",
+                direitosReservados: "© 2025 CCM - Todos los derechos reservados",
+
+                // About Section
+                sobreNosTitle: "Sobre Nosotros",
+                sobreNosLead: "Ofrecemos una plataforma simple y segura para convertir criptomonedas en monedas tradicionales.",
+                sobreNosMissao: "Nuestra misión es facilitar la transacción y conversión de activos digitales, ofreciendo una experiencia rápida y transparente.",
+                segurancaTitle: "Seguridad Garantizada",
+                segurancaDesc: "Todas las consultas de conversión están protegidas por encriptación.",
+                taxasTitle: "Tasas en Tiempo Real",
+                taxasDesc: "Ofrecemos las tasas de cambio más precisas del mercado.",
+                nossosServicos: "Nuestros Servicios",
+                servicoConversao: "Conversión de criptomonedas a monedas fiat",
+                servicoConversaoDesc: "Convierta fácilmente entre más de 20 criptomonedas y monedas tradicionales.",
+                servicoTaxas: "Tasas de cambio en tiempo real",
+                servicoTaxasDesc: "Acceda a las tasas más actualizadas del mercado en tiempo real.",
+                servicoRapido: "Conversiones rápidas y seguras",
+                servicoRapidoDesc: "Obtenga los valores convertidos instantáneamente.",
+                servicoSuporte: "Soporte al cliente 24/7",
+                servicoSuporteDesc: "Nuestro equipo está siempre disponible para ayudar.",
+
+                // FAQ Section
+                perguntasFrequentes: "Preguntas Frecuentes",
+                faqSubtitle: "Encuentre respuestas a las preguntas más comunes sobre nuestro sitio",
+                faqPergunta1: "¿Cómo convertir criptomonedas a monedas tradicionales?",
+                faqResposta1: "Para convertir criptomonedas a monedas tradicionales, simplemente acceda a la página de conversión de nuestro sitio, seleccione la criptomoneda que desea cambiar e ingrese el monto. El sitio calculará automáticamente la conversión basada en tasas de cambio en tiempo real, y verá el valor equivalente en la moneda tradicional elegida.",
+                faqPergunta2: "¿Qué criptomonedas puedo convertir?",
+                faqResposta2: "Actualmente, puede convertir las siguientes criptomonedas a monedas tradicionales: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC) y otras criptomonedas populares. Si tiene dudas sobre criptomonedas específicas, consulte nuestra página de conversión para ver las opciones disponibles.",
+                faqPergunta3: "¿Qué tasa de cambio se utiliza en el sitio?",
+                faqResposta3: "Nuestro sitio utiliza tasas de cambio en tiempo real obtenidas de las principales bolsas de criptomonedas y fuentes confiables del mercado financiero. Las tasas se actualizan constantemente para garantizar la precisión de las conversiones. Tenga en cuenta que las tasas pueden variar ligeramente entre diferentes plataformas de intercambio.",
+                faqPergunta4: "¿Cómo puedo contactar al soporte si necesito ayuda?",
+                faqResposta4: "Si tiene alguna pregunta o problema al usar nuestro sitio, contacte a nuestro equipo de soporte por correo electrónico a soporte@susitioweb.com o por teléfono al +351 932 076 103 | +244 938 413 737. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudar con cualquier pregunta relacionada con el servicio.",
+
+                // Chart Section
+                chartTitle: "Bitcoin a USD - Últimos 30 días",
+                chartPeriod7D: "7 días",
+                chartPeriod30D: "30 días",
+                chartPeriod3M: "3 meses",
+                chartPeriod1A: "1 año",
+
+                // Footer
+                fundadores: "Fundadores",
+                nossaHistoria: "Nuestra Historia",
+                historiaTexto1: "Nosotros, João Canoquela y Domingos Canoquela, creamos este proyecto con un único objetivo: facilitar y revolucionar el proceso de conversión de criptomonedas en el mundo. Vimos que, a pesar del crecimiento acelerado del mercado cripto, muchos usuarios aún enfrentan dificultades en la conversión a monedas tradicionales de forma simple, rápida y segura.",
+                historiaTexto2: "Somos apasionados por la tecnología, la innovación y la evolución. Creemos que el futuro financiero será cada vez más digital y queremos asegurar que cualquier persona, independientemente de su experiencia con criptomonedas, pueda acceder a este futuro sin barreras.",
+                historiaTexto3: "Nuestro viaje comenzó cuando nos dimos cuenta de lo complejo que seguía siendo el mercado cripto para muchos. Analizamos los desafíos, estudiamos las necesidades reales de los usuarios y desarrollamos una plataforma que no solo resuelve estos problemas, sino que también hace la experiencia más eficiente e intuitiva.",
+                historiaTexto4: "Más que un negocio, este es un compromiso con la innovación y la libertad financiera. Nuestra misión es eliminar fronteras financieras y hacer que la conversión de criptomonedas sea accesible para todos.",
+
+                // Brand and Menu
+                brandName: "Conversor de",
+                brandHighlight: "Criptomonedas",
+                menuInicio: "Inicio",
+                menuSobre: "Sobre Nosotros",
+                menuFaq: "FAQ",
+                menuContato: "Contacto",
+                menuIdioma: "Idioma",
+
+                // Footer
+                footerLinksUteis: "Enlaces Útiles",
+                footerFundadores: "Fundadores",
+                footerPrivacidade: "Política de Privacidad",
+                footerTermos: "Términos de Servicio",
+                footerSuporte: "Soporte",
+                footerAjuda: "Centro de Ayuda",
+                footerReportar: "Reportar un Problema",
+                footerContato: "Contacto",
+                footerRedesSociais: "Redes Sociales",
+                footerSigaNos: "Síguenos en redes sociales para novedades.",
+                footerAvisoLegal: "Aviso Legal:",
+                footerAvisoLegalTexto: "Los tipos de cambio pueden variar según el momento de la transacción. Asegúrese de revisar las tasas antes de completar cualquier operación. No nos hacemos responsables por pérdidas debido a fluctuaciones del mercado.",
+                footerDireitos: "© 2025 CCM - Todos los derechos reservados",
+
+                heroTitle: "Conversor de",
+                heroCrypto: "Criptomonedas",
+                heroSubtitle: "¡Comprueba el valor de tu criptomoneda en cualquier moneda tradicional!",
+
+                taxaAtualizadaEm: "Tasa actualizada en",
+                taxaAtualizadaHa: "Tasa actualizada hace",
+                minutos: "minutos",
+                segundos: "segundos",
+                agora: "ahora mismo",
+
+                // Founders Modal
+                modalFundadoresTitle: "Nuestros Fundadores",
+                modalCeoTitle: "Co-Fundador y CEO",
+                modalCtoTitle: "Co-Fundador y CTO",
+                modalHistoriaTitle: "Nuestra Historia",
+                modalHistoriaParagrafo1: "Nosotros, João Canoquela y Domingos Canoquela, creamos este proyecto con un único objetivo: facilitar y revolucionar el proceso de conversión de criptomonedas en el mundo. Vimos que, a pesar del crecimiento acelerado del mercado cripto, muchos usuarios aún enfrentan dificultades en la conversión a monedas tradicionales de forma simple, rápida y segura.",
+                modalHistoriaParagrafo2: "Somos apasionados por la tecnología, la innovación y la evolución. Creemos que el futuro financiero será cada vez más digital y queremos asegurar que cualquier persona, independientemente de su experiencia con criptomonedas, pueda acceder a este futuro sin barreras.",
+                modalHistoriaParagrafo3: "Nuestro viaje comenzó cuando nos dimos cuenta de lo complejo que seguía siendo el mercado cripto para muchos. Analizamos los desafíos, estudiamos las necesidades reales de los usuarios y desarrollamos una plataforma que no solo resuelve estos problemas, sino que también hace la experiencia más eficiente e intuitiva.",
+                modalHistoriaParagrafo4: "Más que un negocio, este es un compromiso con la innovación y la libertad financiera. Nuestra misión es eliminar fronteras financieras y hacer que la conversión de criptomonedas sea accesible para todos."
+            }
+        };
+
+        // Function to update page content based on selected language
+        function updateLanguage(lang) {
+            // Update all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // ... rest of the function ...
+
+            // Update the timestamp format
+            const lastUpdateTime = document.getElementById('lastUpdateTime');
+            if (lastUpdateTime && lastUpdateTime.dataset.timestamp) {
+                lastUpdateTime.textContent = formatLastUpdateTime(
+                    parseInt(lastUpdateTime.dataset.timestamp),
+                    lang
+                );
+            }
+        }
+
+        // Add click event listeners to language options
+        document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = e.target.dataset.lang;
+                updateLanguage(lang);
+            });
+        });
+
+        // Set initial language (default to Portuguese)
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'pt';
+        updateLanguage(savedLanguage);
+
+        // Add function to format the last update time according to language
+        function formatLastUpdateTime(timestamp, lang) {
+            if (!timestamp || isNaN(timestamp)) {
+                return translations[lang].agora;
+            }
+
+            const now = new Date();
+            const updateTime = new Date(timestamp);
+
+            // Verificar se a data é válida
+            if (isNaN(updateTime.getTime())) {
+                return translations[lang].agora;
+            }
+
+            const diff = Math.floor((now - updateTime) / 1000); // difference in seconds
+
+            if (diff < 5) {
+                return translations[lang].agora;
+            }
+
+            if (diff < 60) {
+                return `${translations[lang].taxaAtualizadaHa} ${diff} ${translations[lang].segundos}`;
+            }
+
+            const minutes = Math.floor(diff / 60);
+            if (minutes < 60) {
+                return `${translations[lang].taxaAtualizadaHa} ${minutes} ${translations[lang].minutos}`;
+            }
+
+            // Para timestamps mais antigos que uma hora, mostrar data e hora completas
+            try {
+                return updateTime.toLocaleString(
+                    lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es-ES' : 'en-US',
+                    {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    }
+                );
+            } catch (e) {
+                // Fallback para formato simples
+                return updateTime.toLocaleString();
+            }
+        }
+
+        // Update the function that updates exchange rates to use the new formatting
+        async function updateExchangeRates() {
+            try {
+                const fromCrypto = document.getElementById('from-crypto').value;
+                const prices = await fetchCryptoPrices();
+                if (!prices) {
+                    throw new Error('Dados de preço indisponíveis');
+                }
+
+                // Obter o cryptoId correto
+                const cryptoId = SUPPORTED_CRYPTOS[fromCrypto]?.id;
+                if (!cryptoId) {
+                    throw new Error('Criptomoeda não suportada');
+                }
+
+                // Update the last update timestamp with proper translation
+                const lang = localStorage.getItem('preferredLanguage') || 'pt';
+                const lastUpdateTime = document.getElementById('lastUpdateTime');
+                const timestamp = prices[cryptoId]?.last_updated_at 
+                    ? prices[cryptoId].last_updated_at * 1000
+                    : Date.now();
+                
+                lastUpdateTime.textContent = formatLastUpdateTime(timestamp, lang);
+                lastUpdateTime.dataset.timestamp = timestamp;
+
+            } catch (error) {
+                console.warn('Erro ao atualizar taxas:', error);
+                showError(`Erro ao atualizar taxas: ${error.message}`);
+            }
+        }
+
+        // Start periodic updates
+        setInterval(updateExchangeRates, 60000); // Update every minute
+        
+        // Adicionar evento de redimensionamento para atualizar o gráfico em telas pequenas
+        window.addEventListener('resize', function() {
+            // Se o gráfico já estiver inicializado, refazê-lo para aplicar novas configurações de exibição
+            if (priceChart) {
+                const cryptoId = SUPPORTED_CRYPTOS[document.getElementById('from-crypto').value]?.id || 'bitcoin';
+                const days = parseInt(document.querySelector('.btn-group .btn-primary').dataset.period) || 30;
+                const currency = document.getElementById('to-currency').value.toLowerCase();
+                
+                // Pequeno atraso para evitar várias chamadas durante o redimensionamento
+                clearTimeout(window.resizeChartTimer);
+                window.resizeChartTimer = setTimeout(() => {
+                    updateChart(cryptoId, days, currency);
+                }, 300);
+            }
+        });
+    </script>
+    <script>
+        // API endpoints e configuração
+        const COINGECKO_API = {
+            BASE_URL: 'https://api.coingecko.com/api/v3',
+            RATE_LIMIT: 1000, // 1 segundo entre chamadas
+            lastCall: 0
+            // Nota: Esta API fornece dados reais de criptomoedas.
+            // O código inclui fallbacks para dados em cache ou simulados apenas quando a API não está disponível.
+        };
+
+        // Função para esperar entre chamadas da API
+        function waitForRateLimit() {
+            const now = Date.now();
+            const timeToWait = Math.max(0, COINGECKO_API.lastCall + COINGECKO_API.RATE_LIMIT - now);
+            return new Promise(resolve => setTimeout(resolve, timeToWait));
+        }
+
+        // Mock data para funcionamento offline
+        const MOCK_DATA = {
+            bitcoin: { 
+                usd: 89105.91, eur: 82123.45, gbp: 70234.56, jpy: 13452789, cad: 120345.67, 
+                aud: 136789.12, chf: 80234.56, cny: 576234.45, brl: 445234.56,
+                usd_24h_change: 2.5,
+                last_updated_at: Date.now() / 1000
+            },
+            ethereum: { 
+                usd: 4567.89, eur: 4210.23, gbp: 3567.89, jpy: 678234.56, cad: 6123.45,
+                aud: 6890.12, chf: 4123.45, cny: 29567.89, brl: 22789.45,
+                usd_24h_change: 1.8,
+                last_updated_at: Date.now() / 1000
+            },
+            tether: { 
+                usd: 1.00, eur: 0.92, gbp: 0.79, jpy: 151.23, cad: 1.35,
+                aud: 1.52, chf: 0.89, cny: 7.23, brl: 4.99,
+                usd_24h_change: 0.01,
+                last_updated_at: Date.now() / 1000
+            },
+            binancecoin: { 
+                usd: 567.89, eur: 523.45, gbp: 447.23, jpy: 85678.90, cad: 765.43,
+                aud: 856.78, chf: 512.34, cny: 3678.90, brl: 2834.56,
+                usd_24h_change: 1.2,
+                last_updated_at: Date.now() / 1000
+            },
+            cardano: { 
+                usd: 0.72, eur: 0.66, gbp: 0.57, jpy: 108.45, cad: 0.97,
+                aud: 1.09, chf: 0.64, cny: 4.67, brl: 3.59,
+                usd_24h_change: -1.5,
+                last_updated_at: Date.now() / 1000
+            },
+            ripple: { 
+                usd: 0.89, eur: 0.82, gbp: 0.70, jpy: 134.56, cad: 1.20,
+                aud: 1.35, chf: 0.80, cny: 5.76, brl: 4.45,
+                usd_24h_change: 3.2,
+                last_updated_at: Date.now() / 1000
+            },
+            solana: { 
+                usd: 189.45, eur: 174.56, gbp: 149.23, jpy: 28567.89, cad: 255.67,
+                aud: 286.78, chf: 170.23, cny: 1234.56, brl: 945.67,
+                usd_24h_change: 4.1,
+                last_updated_at: Date.now() / 1000
+            },
+            polkadot: { 
+                usd: 12.34, eur: 11.37, gbp: 9.72, jpy: 1856.78, cad: 16.67,
+                aud: 18.67, chf: 11.12, cny: 80.23, brl: 61.56,
+                usd_24h_change: -0.8,
+                last_updated_at: Date.now() / 1000
+            },
+            dogecoin: { 
+                usd: 0.23, eur: 0.21, gbp: 0.18, jpy: 34.67, cad: 0.31,
+                aud: 0.35, chf: 0.21, cny: 1.49, brl: 1.15,
+                usd_24h_change: 1.6,
+                last_updated_at: Date.now() / 1000
+            }
+        };
+
+        // Função para gerar dados históricos mock
+        function generateMockHistoricalData(cryptoId, days) {
+            const basePrice = MOCK_DATA[cryptoId]?.usd || 100;
+            const volatility = 0.05; // 5% de volatilidade
+            const data = [];
+            
+            for (let i = days; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const randomChange = (Math.random() - 0.5) * 2 * volatility;
+                const price = basePrice * (1 + randomChange);
+                data.push([date.getTime(), price]);
+            }
+            
+            return data;
+        }
+
+        // Cache para armazenar dados
+        const cache = {
+            prices: null,
+            lastUpdate: 0,
+            historicalData: {},
+            CACHE_DURATION: 60000, // 1 minuto para preços
+            HISTORICAL_CACHE_DURATION: 300000, // 5 minutos para dados históricos
+            MAX_RETRIES: 3,
+            RETRY_DELAY: 2000, // 2 segundos
+            isRetrying: false
+        };
+
+        // Função para construir URL com headers apropriados
+        function buildApiRequest(endpoint) {
+            const url = `${COINGECKO_API.BASE_URL}${endpoint}`;
+            return {
+                url,
+                options: {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CoinGecko-Api-Key': COINGECKO_API.API_KEY
+                    }
+                }
+            };
+        }
+
+        // Função para fazer requisições com retry
+        async function fetchWithRetry(endpoint, options = {}, retryCount = 0) {
+            if (cache.isRetrying) {
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                return fetchWithRetry(endpoint, options, retryCount);
+            }
+
+            try {
+                cache.isRetrying = true;
+                const { url, options: defaultOptions } = buildApiRequest(endpoint);
+                const response = await fetch(url, {
+                    ...defaultOptions,
+                    ...options
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429) {
+                        const retryAfter = response.headers.get('Retry-After') || 60;
+                        console.warn(`Rate limit atingido. Aguardando ${retryAfter}s...`);
+                        await new Promise(resolve => setTimeout(resolve, retryAfter * 1000));
+                        return fetchWithRetry(endpoint, options, retryCount);
+                    }
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                cache.isRetrying = false;
+                return data;
+            } catch (error) {
+                console.warn(`Tentativa ${retryCount + 1} falhou:`, error);
+                
+                if (retryCount < cache.MAX_RETRIES) {
+                    const delay = cache.RETRY_DELAY * Math.pow(2, retryCount);
+                    console.warn(`Tentando novamente em ${delay}ms...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return fetchWithRetry(endpoint, options, retryCount + 1);
+                }
+                
+                cache.isRetrying = false;
+                throw error;
+            }
+        }
+
+        // Função para obter preços atualizados
+        async function fetchCryptoPrices() {
+            try {
+                // Primeiro, tenta usar cache recente
+                if (cache.prices && (Date.now() - cache.lastUpdate) < cache.CACHE_DURATION) {
+                    return cache.prices;
+                }
+
+                const cryptoIds = Object.values(SUPPORTED_CRYPTOS).map(c => c.id).join(',');
+                const currencies = SUPPORTED_FIATS.join(',');
+                const endpoint = `/simple/price?ids=${cryptoIds}&vs_currencies=${currencies}&include_24h_change=true&include_last_updated_at=true`;
+                
+                // Construir a URL completa
+                const url = new URL(`${COINGECKO_API.BASE_URL}${endpoint}`);
+                
+                // Esperar pelo rate limit
+                await waitForRateLimit();
+                
+                const response = await fetch(url.toString(), {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429) {
+                        // Rate limit atingido, esperar e tentar novamente
+                        await new Promise(resolve => setTimeout(resolve, 5000));
+                        return fetchCryptoPrices();
+                    }
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                if (data) {
+                    // Validar os dados recebidos
+                    const hasValidData = Object.keys(data).some(cryptoId => 
+                        data[cryptoId] && Object.keys(data[cryptoId]).length > 0
+                    );
+                    
+                    if (hasValidData) {
+                        cache.prices = data;
+                        cache.lastUpdate = Date.now();
+                        console.log('Dados atualizados com sucesso da API');
+                        return data;
+                    }
+                }
+                
+                throw new Error('Dados recebidos da API são inválidos');
+            } catch (error) {
+                console.warn('Erro ao buscar preços:', error);
+                
+                // Se tiver cache, usa como fallback temporário
+                if (cache.prices) {
+                    console.warn('Usando cache como fallback temporário');
+                    return cache.prices;
+                }
+                
+                // Se não tiver cache, usa mock data como último recurso
+                console.warn('Usando mock data como último recurso');
+                return MOCK_DATA;
+            }
+        }
+
+        // Função para obter dados históricos da API
+        async function fetchHistoricalData(cryptoId, days = 30, currency = 'usd') {
+            try {
+                // Esperar pelo rate limit
+                await waitForRateLimit();
+
+                // Construir a URL com os parâmetros corretos
+                const url = new URL(`${COINGECKO_API.BASE_URL}/coins/${cryptoId}/market_chart`);
+                url.searchParams.append('vs_currency', currency);
+                url.searchParams.append('days', days);
+                
+                // Atualizar timestamp da última chamada
+                COINGECKO_API.lastCall = Date.now();
+
+                const response = await fetch(url.toString(), {
+                    method: 'GET',
+                    mode: 'cors',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429) {
+                        // Rate limit atingido, esperar e tentar novamente
+                        await new Promise(resolve => setTimeout(resolve, 5000));
+                        return fetchHistoricalData(cryptoId, days, currency);
+                    }
+                    throw new Error(`Erro na API: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                if (!data?.prices || !Array.isArray(data.prices)) {
+                    // Se não houver dados válidos, usar dados mock
+                    console.warn('Dados inválidos da API, usando dados mock');
+                    return generateMockHistoricalData(cryptoId, days);
+                }
+
+                // Processar os dados para ter a quantidade correta de pontos
+                let processedData = data.prices;
+                if (processedData.length > 0) {
+                    // Ajustar a quantidade de pontos baseado no período
+                    if (days <= 7) {
+                        // Para 7 dias, manter mais pontos para melhor granularidade
+                        processedData = processedData.filter((_, index) => index % 3 === 0);
+                    } else if (days <= 30) {
+                        // Para 30 dias, pontos a cada 2 horas
+                        processedData = processedData.filter((_, index) => index % 6 === 0);
+                    } else if (days <= 90) {
+                        // Para 3 meses, pontos diários
+                        processedData = processedData.filter((_, index) => index % 24 === 0);
+                    } else {
+                        // Para 1 ano, pontos a cada 3 dias
+                        processedData = processedData.filter((_, index) => index % 72 === 0);
+                    }
+                }
+
+                return processedData;
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+                // Em caso de erro, retornar dados mock
+                console.warn('Usando dados mock devido ao erro');
+                return generateMockHistoricalData(cryptoId, days);
+            }
+        }
+
+        // Supported cryptocurrencies configuration
+        const SUPPORTED_CRYPTOS = {
+            BTC: { id: 'bitcoin', symbol: 'btc', name: 'Bitcoin' },
+            ETH: { id: 'ethereum', symbol: 'eth', name: 'Ethereum' },
+            USDT: { id: 'tether', symbol: 'usdt', name: 'Tether' },
+            BNB: { id: 'binancecoin', symbol: 'bnb', name: 'Binance Coin' },
+            ADA: { id: 'cardano', symbol: 'ada', name: 'Cardano' },
+            XRP: { id: 'ripple', symbol: 'xrp', name: 'XRP' },
+            SOL: { id: 'solana', symbol: 'sol', name: 'Solana' },
+            DOT: { id: 'polkadot', symbol: 'dot', name: 'Polkadot' },
+            DOGE: { id: 'dogecoin', symbol: 'doge', name: 'Dogecoin' },
+            MATIC: { id: 'matic-network', symbol: 'matic', name: 'Polygon' },
+            LINK: { id: 'chainlink', symbol: 'link', name: 'Chainlink' },
+            UNI: { id: 'uniswap', symbol: 'uni', name: 'Uniswap' },
+            AVAX: { id: 'avalanche-2', symbol: 'avax', name: 'Avalanche' },
+            ATOM: { id: 'cosmos', symbol: 'atom', name: 'Cosmos' },
+            LTC: { id: 'litecoin', symbol: 'ltc', name: 'Litecoin' },
+            FTM: { id: 'fantom', symbol: 'ftm', name: 'Fantom' },
+            NEAR: { id: 'near', symbol: 'near', name: 'NEAR Protocol' },
+            ALGO: { id: 'algorand', symbol: 'algo', name: 'Algorand' },
+            VET: { id: 'vechain', symbol: 'vet', name: 'VeChain' },
+            FIL: { id: 'filecoin', symbol: 'fil', name: 'Filecoin' }
+        };
+
+        // Supported fiat currencies
+        const SUPPORTED_FIATS = ['usd', 'eur', 'gbp', 'jpy', 'aoa', 'cad', 'aud', 'chf', 'cny', 'brl', 'inr', 'krw', 'rub', 'zar', 'mxn', 'sgd', 'aed', 'nzd', 'try', 'sek'];
+
+        // Chart instance
+        let priceChart;
+
+        // Error handling function with visual feedback
+        function showError(message) {
+            console.error(message);
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'alert alert-danger alert-dismissible fade show';
+            errorDiv.innerHTML = `
+                <strong>Erro:</strong> ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            const container = document.querySelector('.converter-card');
+            container.insertBefore(errorDiv, container.firstChild);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                errorDiv.remove();
+            }, 5000);
+        }
+
+        // Format currency value with proper precision
+        function formatCurrency(value, currency = 'USD', locale = 'pt-BR') {
+            if (typeof value !== 'number' || isNaN(value)) {
+                return '0,00';
+            }
+
+            const precision = value < 1 ? 6 : 2;
+            return new Intl.NumberFormat(locale, {
+                style: 'currency',
+                currency: currency,
+                minimumFractionDigits: precision,
+                maximumFractionDigits: precision
+            }).format(value);
+        }
+
+        // Adicionar taxa de conversão USD/AOA (atualizada regularmente)
+        const AOA_RATE = {
+            rate: 832.50, // Taxa base USD/AOA
+            lastUpdate: null,
+            async update() {
+                try {
+                    const response = await fetch('https://open.er-api.com/v6/latest/USD');
+                    const data = await response.json();
+                    if (data && data.rates && data.rates.AOA) {
+                        this.rate = data.rates.AOA;
+                        this.lastUpdate = new Date();
+                        console.log('Taxa AOA atualizada:', this.rate);
+                    }
+                } catch (error) {
+                    console.warn('Erro ao atualizar taxa AOA:', error);
+                }
+            }
+        };
+
+        // Atualizar a função convertCurrency
+        async function convertCurrency() {
+            const fromCrypto = document.getElementById('from-crypto').value;
+            const toCurrency = document.getElementById('to-currency').value;
+            const amount = parseFloat(document.getElementById('crypto-amount').value) || 0;
+
+            try {
+                const prices = await fetchCryptoPrices();
+                let rate;
+                let result;
+                let displayRate;
+
+                // Verificar se a moeda de origem é uma criptomoeda
+                const fromIsCrypto = SUPPORTED_CRYPTOS.hasOwnProperty(fromCrypto);
+                // Verificar se a moeda de destino é uma criptomoeda
+                const toIsCrypto = SUPPORTED_CRYPTOS.hasOwnProperty(toCurrency);
+
+                // Se ambos são do mesmo tipo (ambos cripto ou ambos moeda), não podemos converter
+                if ((fromIsCrypto && toIsCrypto) || (!fromIsCrypto && !toIsCrypto)) {
+                    console.warn('Não é possível converter entre o mesmo tipo de moeda');
+                    document.getElementById('currency-amount').value = 'Conversão não suportada';
+                    return;
+                }
+
+                // Caso especial para AOA (Kwanza)
+                const isAOAInvolved = fromCrypto === 'AOA' || toCurrency === 'AOA';
+                if (isAOAInvolved) {
+                    // Atualizar taxa do AOA se necessário
+                    if (!AOA_RATE.lastUpdate || Date.now() - AOA_RATE.lastUpdate > 3600000) {
+                        await AOA_RATE.update();
+                    }
+                }
+
+                // Verifica se a moeda de origem é uma criptomoeda
+                if (fromIsCrypto) {
+                    const cryptoId = SUPPORTED_CRYPTOS[fromCrypto].id;
+                    
+                    if (toCurrency === 'AOA') {
+                        // Primeiro converter para USD, depois para AOA
+                        if (!prices || !prices[cryptoId] || !prices[cryptoId].usd) {
+                            throw new Error('Dados de preço indisponíveis');
+                        }
+                        const usdRate = prices[cryptoId].usd;
+                        rate = usdRate * AOA_RATE.rate;
+                        result = amount * rate;
+                        displayRate = rate;
+                    } else {
+                        const targetCurrency = toCurrency.toLowerCase();
+                        if (!prices || !prices[cryptoId] || !prices[cryptoId][targetCurrency]) {
+                            throw new Error('Dados de preço indisponíveis');
+                        }
+                        rate = prices[cryptoId][targetCurrency];
+                        result = amount * rate;
+                        displayRate = rate;
+                    }
+                } else if (toIsCrypto) {
+                    const cryptoId = SUPPORTED_CRYPTOS[toCurrency].id;
+                    
+                    if (fromCrypto === 'AOA') {
+                        // Primeiro converter de AOA para USD, depois para crypto
+                        if (!prices || !prices[cryptoId] || !prices[cryptoId].usd) {
+                            throw new Error('Dados de preço indisponíveis');
+                        }
+                        const usdRate = prices[cryptoId].usd;
+                        rate = (1 / AOA_RATE.rate) * usdRate;
+                        result = amount / rate;
+                        displayRate = 1 / rate;
+                    } else {
+                        const sourceCurrency = fromCrypto.toLowerCase();
+                        if (!prices || !prices[cryptoId] || !prices[cryptoId][sourceCurrency]) {
+                            throw new Error('Dados de preço indisponíveis');
+                        }
+                        rate = prices[cryptoId][sourceCurrency];
+                        result = amount / rate;
+                        displayRate = 1 / rate;
+                    }
+                } else {
+                    throw new Error('Combinação de moedas inválida');
+                }
+                
+                // Formatar e exibir o resultado com a precisão apropriada
+                document.getElementById('currency-amount').value = formatCurrency(result, toCurrency);
+                
+                // Atualizar a taxa de câmbio mostrada
+                document.querySelector('.crypto-input .text-muted small').textContent = 
+                    `1 ${fromCrypto} = ${formatCurrency(displayRate, toCurrency)}`;
+                
+                // Atualizar o timestamp
+                const lang = localStorage.getItem('preferredLanguage') || 'pt';
+                const cryptoId = SUPPORTED_CRYPTOS[fromCrypto]?.id || SUPPORTED_CRYPTOS[toCurrency]?.id;
+                const timestamp = cryptoId && prices[cryptoId]?.last_updated_at 
+                    ? prices[cryptoId].last_updated_at * 1000
+                    : Date.now();
+
+                const lastUpdateTime = document.getElementById('lastUpdateTime');
+                lastUpdateTime.textContent = formatLastUpdateTime(timestamp, lang);
+                lastUpdateTime.dataset.timestamp = timestamp; // Armazenar o timestamp para atualizações futuras
+
+            } catch (error) {
+                console.warn('Erro na conversão:', error);
+                showError(`Erro na conversão: ${error.message}`);
+            }
+        }
+
+        // Update chart with real-time data
+        async function updateChart(cryptoId = 'bitcoin', days = 30, currency = 'usd') {
+            try {
+                // Mostrar loading
+                document.getElementById('chart-skeleton').classList.remove('hide-skeleton');
+                document.getElementById('chart-real').classList.add('hide-skeleton');
+
+                // Buscar dados históricos
+                const data = await fetchHistoricalData(cryptoId, days, currency);
+
+                // Processar dados para o gráfico
+                const chartData = data.map(([timestamp, price]) => {
+                    // Garantir que o timestamp seja válido
+                    const date = new Date(timestamp);
+                    if (isNaN(date.getTime())) {
+                        return null;
+                    }
+                    return {
+                        x: date,
+                        y: price
+                    };
+                }).filter(point => point !== null); // Remover pontos inválidos
+
+                // Verificar se temos dados suficientes
+                if (chartData.length === 0) {
+                    throw new Error('Dados insuficientes para exibir o gráfico');
+                }
+
+                // Destruir gráfico existente se houver
+                if (priceChart) {
+                    priceChart.destroy();
+                }
+
+                // Configurar novo gráfico
+        const ctx = document.getElementById('cryptoChart').getContext('2d');
+                priceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [{
+                            label: `Preço (${currency.toUpperCase()})`,
+                            data: chartData,
+                            borderColor: 'rgb(0, 70, 173)',
+                            backgroundColor: 'rgba(0, 70, 173, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        },
+                plugins: {
+                    legend: {
+                        display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.parsed.y;
+                                        return formatCurrency(value, currency.toUpperCase());
+                                    },
+                                    title: function(context) {
+                                        try {
+                                            const date = new Date(context[0].parsed.x);
+                                            if (isNaN(date.getTime())) {
+                                                return 'Data indisponível';
+                                            }
+                                            return date.toLocaleString('pt-BR', {
+                                                day: '2-digit',
+                                                month: '2-digit',
+                                                year: 'numeric',
+                                                hour: days <= 7 ? '2-digit' : undefined,
+                                                minute: days <= 7 ? '2-digit' : undefined
+                                            });
+                                        } catch (error) {
+                                            console.warn('Erro ao formatar data do tooltip:', error);
+                                            return 'Data indisponível';
+                                        }
+                                    }
+                                }
+                    }
+                },
+                scales: {
+                            x: {
+                                type: 'time',
+                                time: {
+                                    unit: days <= 7 ? 'hour' : 'day',
+                                    displayFormats: {
+                                        hour: 'dd/MM HH:mm',
+                                        day: 'dd/MM'
+                                    },
+                                    tooltipFormat: days <= 7 ? 'dd/MM HH:mm' : 'dd/MM/yyyy'
+                                },
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    maxRotation: 0,
+                                    autoSkip: true,
+                                    maxTicksLimit: function() {
+                                        // Reduz a quantidade de ticks em telas menores
+                                        if (window.innerWidth <= 576) {
+                                            return days <= 7 ? 6 : 4;
+                                        } else if (window.innerWidth <= 768) {
+                                            return days <= 7 ? 8 : 6;
+                                        } else {
+                                            return days <= 7 ? 12 : 8;
+                                        }
+                                    }(),
+                                    callback: function(value) {
+                                        try {
+                                            const date = new Date(value);
+                                            if (isNaN(date.getTime())) {
+                                                return '';
+                                            }
+                                            
+                                            // Em telas menores, simplificar ainda mais os rótulos
+                                            if (window.innerWidth <= 576) {
+                                                if (days > 30) {
+                                                    // Para períodos longos em telas pequenas, mostrar apenas mês
+                                                    return date.toLocaleDateString('pt-BR', {
+                                                        month: '2-digit'
+                                                    });
+                                                }
+                                            }
+                                            
+                                            return date.toLocaleDateString('pt-BR', {
+                                                day: '2-digit',
+                                                month: '2-digit'
+                                            });
+                                        } catch (error) {
+                                            console.warn('Erro ao formatar data do eixo:', error);
+                                            return '';
+                                        }
+                                    }
+                                }
+                            },
+                            y: {
+                                position: 'right',
+                                ticks: {
+                                    callback: function(value) {
+                                        return formatCurrency(value, currency.toUpperCase());
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.05)'
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Atualizar título do gráfico
+                const fromCrypto = document.getElementById('from-crypto').value;
+                const toCurrency = document.getElementById('to-currency').value;
+                const fromName = SUPPORTED_CRYPTOS[fromCrypto]?.name || fromCrypto;
+                const toName = SUPPORTED_CRYPTOS[toCurrency]?.name || toCurrency.toUpperCase();
+
+                let periodText;
+                switch(days) {
+                    case 7:
+                        periodText = 'Últimos 7 dias';
+                        break;
+                    case 30:
+                        periodText = 'Últimos 30 dias';
+                        break;
+                    case 90:
+                        periodText = 'Últimos 3 meses';
+                        break;
+                    case 365:
+                        periodText = 'Último ano';
+                        break;
+                    default:
+                        periodText = `Últimos ${days} dias`;
+                }
+
+                const title = `${fromName} para ${toName} - ${periodText}`;
+                document.querySelector('.chart-container h5').textContent = title;
+
+                // Esconder loading e mostrar gráfico
+                document.getElementById('chart-skeleton').classList.add('hide-skeleton');
+                document.getElementById('chart-real').classList.remove('hide-skeleton');
+
+            } catch (error) {
+                console.error('Erro ao atualizar gráfico:', error);
+                showError('Erro ao carregar dados do gráfico. Por favor, aguarde um momento e tente novamente.');
+                document.getElementById('chart-skeleton').classList.add('hide-skeleton');
+            }
+        }
+
+        // Função para gerenciar estados de loading
+        function setLoadingState(isLoading) {
+            const tickerSkeleton = document.getElementById('ticker-skeleton');
+            const tickerReal = document.getElementById('ticker-real');
+            const chartSkeleton = document.getElementById('chart-skeleton');
+            const chartReal = document.getElementById('chart-real');
+
+            if (isLoading) {
+                tickerSkeleton.classList.remove('hide-skeleton');
+                tickerReal.classList.add('hide-skeleton');
+                chartSkeleton.classList.remove('hide-skeleton');
+                chartReal.classList.add('hide-skeleton');
+            } else {
+                // Adiciona fade-out ao skeleton
+                tickerSkeleton.classList.add('fade-out');
+                chartSkeleton.classList.add('fade-out');
+                
+                // Após a animação de fade-out, esconde o skeleton e mostra o conteúdo real
+                setTimeout(() => {
+                    tickerSkeleton.classList.add('hide-skeleton');
+                    chartSkeleton.classList.add('hide-skeleton');
+                    
+                    // Mostra o conteúdo real com fade-in
+                    tickerReal.classList.remove('hide-skeleton');
+                    chartReal.classList.remove('hide-skeleton');
+                    tickerReal.classList.add('fade-in');
+                    chartReal.classList.add('fade-in');
+                }, 300);
+            }
+        }
+
+        // Update ticker with real-time data
+        async function updateTicker() {
+            try {
+                const prices = await fetchCryptoPrices();
+                if (!prices) {
+                    throw new Error('Dados do ticker indisponíveis');
+                }
+
+                const tickerContainer = document.getElementById('ticker-real');
+                let tickerContent = '';
+
+                // Criar o conteúdo do ticker com dados da API
+                for (const [symbol, crypto] of Object.entries(SUPPORTED_CRYPTOS)) {
+                    const cryptoData = prices[crypto.id];
+                    if (cryptoData && cryptoData.usd && cryptoData.usd_24h_change !== undefined) {
+                        const price = cryptoData.usd;
+                        const change = cryptoData.usd_24h_change;
+                        const changeClass = change >= 0 ? 'positive' : 'negative';
+                        const changeSign = change >= 0 ? '+' : '';
+
+                        tickerContent += `
+                            <div class="ticker-item">
+                                <strong>${symbol}:</strong> ${formatCurrency(price, 'USD')} 
+                                <span class="${changeClass}">${changeSign}${change.toFixed(2)}%</span>
+                            </div>
+                        `;
+                    }
+                }
+
+                // Se não houver conteúdo, usar dados mock como fallback
+                if (!tickerContent) {
+                    for (const [symbol, crypto] of Object.entries(SUPPORTED_CRYPTOS)) {
+                        const mockData = MOCK_DATA[crypto.id];
+                        if (mockData) {
+                            const price = mockData.usd;
+                            const change = mockData.usd_24h_change;
+                            const changeClass = change >= 0 ? 'positive' : 'negative';
+                            const changeSign = change >= 0 ? '+' : '';
+
+                            tickerContent += `
+                                <div class="ticker-item">
+                                    <strong>${symbol}:</strong> ${formatCurrency(price, 'USD')} 
+                                    <span class="${changeClass}">${changeSign}${change.toFixed(2)}%</span>
+                                </div>
+                            `;
+                        }
+                    }
+                }
+
+                // Duplicar o conteúdo para criar uma animação contínua
+                const duplicatedContent = tickerContent + tickerContent;
+
+                // Atualizar o ticker apenas se o conteúdo for diferente
+                if (tickerContainer.innerHTML !== duplicatedContent) {
+                    // Parar a animação atual
+                    tickerContainer.style.animation = 'none';
+                    tickerContainer.offsetHeight; // Trigger reflow
+                    
+                    // Atualizar o conteúdo
+                    tickerContainer.innerHTML = duplicatedContent;
+                    
+                    // Reiniciar a animação
+                    tickerContainer.style.animation = 'ticker 30s linear infinite';
+                }
+
+            } catch (error) {
+                console.warn('Erro ao atualizar ticker:', error);
+            }
+        }
+
+        // Função para inicializar com verificação de conexão
+        async function safeInitialize() {
+            try {
+                // Mostrar estado de loading
+                setLoadingState(true);
+
+                // Primeira tentativa de buscar dados reais
+                try {
+                    const prices = await fetchCryptoPrices();
+                    if (!prices) {
+                        throw new Error('Não foi possível obter dados da API');
+                    }
+
+                    // Se chegou aqui, temos dados reais
+                    await Promise.all([
+                        updateTicker(),
+                        updateChartBasedOnSelection(),
+                        convertCurrency()
+                    ]);
+
+                    // Configurar atualizações periódicas mais frequentes
+                    setInterval(async () => {
+                        try {
+                            const newPrices = await fetchCryptoPrices();
+                            if (newPrices) {
+                                await Promise.all([
+                                    updateTicker(),
+                                    convertCurrency()
+                                ]);
+                            }
+                        } catch (error) {
+                            console.warn('Erro na atualização periódica:', error);
+                            showError('Erro ao atualizar preços. Tentando novamente...');
+                        }
+                    }, 60000); // Atualiza a cada 1 minuto
+
+                    // Atualização do gráfico menos frequente
+                    setInterval(async () => {
+                        try {
+                            await updateChartBasedOnSelection();
+                        } catch (error) {
+                            console.warn('Erro ao atualizar gráfico:', error);
+                        }
+                    }, 300000); // Atualiza a cada 5 minutos
+
+                } catch (error) {
+                    console.warn('Erro ao inicializar com dados reais:', error);
+                    showError('Não foi possível obter dados em tempo real. Usando dados em cache...');
+                    
+                    // Tenta usar cache ou mock data como fallback
+                    await Promise.all([
+                        updateTicker(),
+                        updateChart(),
+                        convertCurrency()
+                    ]);
+                }
+
+                // Esconder loading e mostrar dados
+                setLoadingState(false);
+
+                // Event listeners
+                document.getElementById('crypto-amount').addEventListener('input', function(e) {
+                    // Obter o valor atual e a posição do cursor
+                    let value = e.target.value;
+                    const cursorPosition = e.target.selectionStart;
+                    
+                    // Verificar se há vírgulas ou pontos
+                    const hasComma = value.includes(',');
+                    const hasDot = value.includes('.');
+                    
+                    // Substituir todas as vírgulas por pontos
+                    value = value.replace(/,/g, '.');
+                    
+                    // Limitar entrada para números e ponto decimal
+                    value = value.replace(/[^\d.]/g, '');
+                    
+                    // Permitir apenas um ponto decimal
+                    const parts = value.split('.');
+                    if (parts.length > 2) {
+                        value = parts[0] + '.' + parts.slice(1).join('');
+                    }
+                    
+                    // Atualizar o valor
+                    e.target.value = value;
+                    
+                    // Tentar manter a posição do cursor próxima de onde estava
+                    if (hasComma || hasDot) {
+                        const newPosition = Math.min(cursorPosition, value.length);
+                        e.target.setSelectionRange(newPosition, newPosition);
+                    }
+                });
+
+                // Remover o debounce e adicionar apenas o evento de clique
+                document.getElementById('convert-btn').addEventListener('click', async function() {
+                    // Mostrar loading no botão
+                    const btn = this;
+                    const originalText = btn.innerHTML;
+                    btn.disabled = true;
+                    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Convertendo...';
+                    
+                    try {
+                        // Garantir que o valor do input seja um número válido
+                        const inputElement = document.getElementById('crypto-amount');
+                        let value = inputElement.value.replace(/,/g, '.'); // Substituir vírgulas por pontos
+                        
+                        // Se o valor não for um número válido, definir como 0
+                        if (isNaN(parseFloat(value)) || !isFinite(value)) {
+                            value = '0';
+                        }
+                        
+                        // Atualizar o input com o valor formatado
+                        inputElement.value = value;
+                        
+                        await convertCurrency();
+                    } catch (error) {
+                        showError(`Erro na conversão: ${error.message}`);
+                    } finally {
+                        // Restaurar o botão
+                        btn.disabled = false;
+                        btn.innerHTML = originalText;
+                    }
+                });
+
+                // Adicionar evento de tecla Enter para converter
+                document.getElementById('crypto-amount').addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        // Formatar o valor antes de converter
+                        let value = this.value.replace(/,/g, '.'); // Substituir vírgulas por pontos
+                        
+                        // Se o valor não for um número válido, definir como 0
+                        if (isNaN(parseFloat(value)) || !isFinite(value)) {
+                            value = '0';
+                        }
+                        
+                        // Atualizar o input com o valor formatado
+                        this.value = value;
+                        
+                        document.getElementById('convert-btn').click();
+                    }
+                });
+
+                // Adicionar funcionalidade de troca
+                document.getElementById('swap-btn').addEventListener('click', async function() {
+                    // Salvar valores atuais
+                    const fromSelect = document.getElementById('from-crypto');
+                    const toSelect = document.getElementById('to-currency');
+                    const fromImg = document.getElementById('from-crypto-img');
+                    const toImg = document.getElementById('to-currency-img');
+                    const amount = document.getElementById('crypto-amount').value;
+                    const result = document.getElementById('currency-amount').value;
+
+                    // Limpar os campos para evitar conversões intermediárias
+                    document.getElementById('crypto-amount').value = '';
+                    document.getElementById('currency-amount').value = '';
+
+                    // Trocar valores selecionados
+                    const fromValue = fromSelect.value;
+                    const toValue = toSelect.value;
+
+                    // Salvar os dados das imagens antes da troca
+                    const fromImgSrc = fromImg.src;
+                    const toImgSrc = toImg.src;
+
+                    // Verificar se o valor de origem é uma criptomoeda
+                    const fromIsCrypto = SUPPORTED_CRYPTOS.hasOwnProperty(fromValue);
+                    // Verificar se o valor de destino é uma criptomoeda
+                    const toIsCrypto = SUPPORTED_CRYPTOS.hasOwnProperty(toValue);
+
+                    // Se ambos são do mesmo tipo (ambos cripto ou ambos moeda), não podemos trocar
+                    if ((fromIsCrypto && toIsCrypto) || (!fromIsCrypto && !toIsCrypto)) {
+                        console.warn('Não é possível trocar entre o mesmo tipo de moeda');
+                        return;
+                    }
+
+                    // Salvar todas as opções atuais
+                    const fromOptions = Array.from(fromSelect.options).map(opt => ({
+                        value: opt.value,
+                        text: opt.text,
+                        img: opt.getAttribute('data-img')
+                    }));
+                    
+                    const toOptions = Array.from(toSelect.options).map(opt => ({
+                        value: opt.value,
+                        text: opt.text,
+                        img: opt.getAttribute('data-img')
+                    }));
+
+                    // Limpar os selects
+                    while (fromSelect.options.length > 0) {
+                        fromSelect.remove(0);
+                    }
+                    
+                    while (toSelect.options.length > 0) {
+                        toSelect.remove(0);
+                    }
+
+                    // Preencher os selects com as opções trocadas
+                    toOptions.forEach(opt => {
+                        const newOption = document.createElement('option');
+                        newOption.value = opt.value;
+                        newOption.text = opt.text;
+                        newOption.setAttribute('data-img', opt.img);
+                        fromSelect.add(newOption);
+                    });
+                    
+                    fromOptions.forEach(opt => {
+                        const newOption = document.createElement('option');
+                        newOption.value = opt.value;
+                        newOption.text = opt.text;
+                        newOption.setAttribute('data-img', opt.img);
+                        toSelect.add(newOption);
+                    });
+
+                    // Selecionar os valores trocados
+                    fromSelect.value = toValue;
+                    toSelect.value = fromValue;
+
+                    // Trocar imagens
+                    fromImg.src = toImgSrc;
+                    toImg.src = fromImgSrc;
+
+                    // Atualizar valores invertidos
+                    if (amount && result) {
+                        document.getElementById('crypto-amount').value = result.replace(/[^0-9.]/g, '');
+                        await convertCurrency();
+                    }
+
+                    // Atualizar o gráfico com base nas novas seleções
+                    await updateChartBasedOnSelection();
+
+                    // Animar o ícone
+                    this.style.transform = 'rotate(180deg)';
+                    setTimeout(() => {
+                        this.style.transform = 'rotate(0deg)';
+                    }, 300);
+                });
+
+                // Event listeners para seleção de moedas
+                document.getElementById('from-crypto').addEventListener('change', async function() {
+                    const selectedOption = this.options[this.selectedIndex];
+                    const imgUrl = selectedOption.getAttribute('data-img');
+                    document.getElementById('from-crypto-img').src = imgUrl;
+                    
+                    await convertCurrency();
+                    await updateChartBasedOnSelection();
+                });
+
+                document.getElementById('to-currency').addEventListener('change', async function() {
+                    const selectedOption = this.options[this.selectedIndex];
+                    const imgUrl = selectedOption.getAttribute('data-img');
+                    document.getElementById('to-currency-img').src = imgUrl;
+                    
+                    await convertCurrency();
+                    await updateChartBasedOnSelection();
+                });
+
+                // Chart period buttons
+                document.querySelectorAll('.chart-container .btn').forEach(button => {
+                    button.addEventListener('click', async function() {
+                        try {
+                            const days = parseInt(this.getAttribute('data-period'));
+                            const fromValue = document.getElementById('from-crypto').value;
+                            const toValue = document.getElementById('to-currency').value;
+                            
+                            // Determinar qual é a criptomoeda e qual é a moeda
+                            let cryptoId;
+                            let currency;
+                            
+                            if (SUPPORTED_CRYPTOS[fromValue]) {
+                                cryptoId = SUPPORTED_CRYPTOS[fromValue].id;
+                                currency = toValue.toLowerCase();
+                            } else if (SUPPORTED_CRYPTOS[toValue]) {
+                                cryptoId = SUPPORTED_CRYPTOS[toValue].id;
+                                currency = fromValue.toLowerCase();
+                            } else {
+                                console.warn('Nenhuma criptomoeda selecionada para o gráfico');
+                                return;
+                            }
+                            
+                            // Atualizar o gráfico
+                            await updateChart(cryptoId, days, currency);
+                            
+                            // Atualizar botões
+                            document.querySelectorAll('.chart-container .btn').forEach(btn => {
+                                btn.classList.remove('btn-primary');
+                                btn.classList.add('btn-outline-primary');
+                            });
+                            this.classList.remove('btn-outline-primary');
+                            this.classList.add('btn-primary');
+                        } catch (error) {
+                            console.error('Erro ao atualizar período do gráfico:', error);
+                        }
+                    });
+                });
+
+                // Função para atualizar o gráfico com base na moeda selecionada
+                async function updateChartBasedOnSelection() {
+                    const fromValue = document.getElementById('from-crypto').value;
+                    const toValue = document.getElementById('to-currency').value;
+                    const activePeriodBtn = document.querySelector('.chart-container .btn.btn-primary');
+                    const days = activePeriodBtn ? parseInt(activePeriodBtn.getAttribute('data-period')) : 30;
+                    
+                    // Determinar qual é a criptomoeda e qual é a moeda
+                    let cryptoId;
+                    let currency;
+                    
+                    if (SUPPORTED_CRYPTOS[fromValue]) {
+                        cryptoId = SUPPORTED_CRYPTOS[fromValue].id;
+                        currency = toValue.toLowerCase();
+                    } else if (SUPPORTED_CRYPTOS[toValue]) {
+                        cryptoId = SUPPORTED_CRYPTOS[toValue].id;
+                        currency = fromValue.toLowerCase();
+                    } else {
+                        console.warn('Nenhuma criptomoeda selecionada para o gráfico');
+                        return;
+                    }
+                    
+                    // Atualizar o gráfico
+                    await updateChart(cryptoId, days, currency);
+                }
+
+            } catch (error) {
+                console.error('Erro crítico na inicialização:', error);
+                showError(`Erro crítico: ${error.message}`);
+                setLoadingState(false);
+            }
+        }
+
+        // Iniciar a aplicação com tratamento de erro
+        safeInitialize().catch(error => {
+            console.error('Erro fatal:', error);
+            showError('Erro fatal ao iniciar a aplicação. Por favor, recarregue a página.');
+        });
+    </script>
+    
+    <!-- Script para garantir que o FAB apareça imediatamente -->
+    <script>
+        (function() {
+            // Executar imediatamente
+            if (window.innerWidth <= 360) {
+                var fab = document.getElementById('floatingActionBtn');
+                if (fab) {
+                    fab.style.cssText = `
+                        display: block !important;
+                        opacity: 1 !important;
+                        transform: scale(1) !important;
+                        visibility: visible !important;
+                        pointer-events: auto !important;
+                        z-index: 9999 !important;
+                        bottom: 15px !important;
+                        right: 15px !important;
+                        position: fixed !important;
+                    `;
+                }
+                
+                var navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    navbar.style.display = 'none';
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

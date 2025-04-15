@@ -1,0 +1,3203 @@
+  :root {
+            --primary: #0046AD;
+            --secondary: #5AE500;
+            --light-blue: #6989DB;
+            --white: #FFFFFF;
+            --dark: #333333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark);
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Completely disable all transitions for navbar and brand elements */
+        /* Removing this rule as requested */
+        
+        .navbar {
+            background-color: var(--primary);
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .brand-text {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .brand-text .highlight {
+            color: var(--white);
+        }
+        
+        /* Texto completo e resumido da marca */
+        .brand-text-full {
+            display: inline;
+        }
+        
+        .brand-text-short {
+            display: none;
+        }
+        
+        /* Em telas pequenas, mostrar apenas CCM */
+        @media (max-width: 576px) {
+            .brand-text-full {
+                display: none;
+            }
+            
+            .brand-text-short {
+                display: inline;
+            }
+        }
+        
+        .hero {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p.lead {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Hero responsive adjustments */
+        @media (max-width: 992px) {
+            .hero {
+                padding: 1.75rem 0;
+                border-bottom-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1.5rem 0;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 1.25rem 0;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero p.lead {
+                font-size: 0.95rem;
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero {
+                padding: 1rem 0;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            
+            .hero p.lead {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .hero {
+                padding: 0.75rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.3rem;
+            }
+            
+            .hero p.lead {
+                font-size: 0.85rem;
+            }
+        }
+        
+        .converter-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 100;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .swap-icon {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .swap-icon:hover {
+            transform: rotate(180deg);
+        }
+        
+        .crypto-input, .crypto-output {
+            background-color: #f1f3f5;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .crypto-input:focus-within, .crypto-output:focus-within {
+            box-shadow: 0 0 0 2px rgba(0, 70, 173, 0.2);
+            background-color: #f8f9fa;
+        }
+        
+        .crypto-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .crypto-select {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            color: var(--dark);
+            cursor: pointer;
+            width: 100%;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .form-control {
+            border: none;
+            background-color: transparent;
+            font-size: 1.2rem;
+            font-weight: 500;
+            width: 100%;
+        }
+        
+        .chart-section {
+            padding: 3rem 0;
+            background-color: var(--white);
+        }
+        
+        .chart-container {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            overflow-x: hidden;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .btn-group {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-group .btn {
+            border-radius: 0.5rem;
+            margin: 0.25rem;
+            white-space: nowrap;
+        }
+
+        .btn-group .btn.btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-group .btn.btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-group .btn.btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        #chart-skeleton {
+            width: 100%;
+        }
+
+        .skeleton-chart {
+            height: 400px;
+            background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 0.5rem;
+        }
+        
+        .ticker-container {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 0;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+            padding-right: 50px;
+        }
+        
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 30px;
+            padding: 0 10px;
+            font-size: 0.9rem;
+        }
+        
+        .positive {
+            color: #28a745;
+        }
+        
+        .negative {
+            color: #dc3545;
+        }
+        
+        .footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+        
+        .footer h5 {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .social-icon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px) {
+            .social-icons-row {
+                gap: 12px;
+            }
+            
+            .social-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+        }
+        
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .converter-card {
+                margin-top: -30px;
+            }
+            
+            .hero {
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+
+        .social-media-section {
+            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.15) 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            width: 100%;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icon.facebook:hover { background: #1877f2; }
+        .social-icon.twitter:hover { background: #1da1f2; }
+        .social-icon.instagram:hover { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .social-icon.linkedin:hover { background: #0077b5; }
+        .social-icon.youtube:hover { background: #ff0000; }
+        .social-icon.telegram:hover { background: #0088cc; }
+
+        .social-title {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .social-description {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .social-icons-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .social-icon {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        /* Skeleton Loading Styles */
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .skeleton {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.1) 100%
+            );
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
+            border-radius: 4px;
+        }
+
+        .skeleton-text {
+            height: 1em;
+            margin: 0.5em 0;
+        }
+
+        .skeleton-ticker {
+            display: flex;
+            gap: 30px;
+            padding: 1rem;
+            overflow: hidden;
+            animation: tickerSkeleton 20s linear infinite;
+        }
+
+        @keyframes tickerSkeleton {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .skeleton-ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 180px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .skeleton-symbol {
+            width: 40px;
+            height: 1em;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .skeleton-price {
+            width: 80px;
+            height: 1em;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .skeleton-change {
+            width: 50px;
+            height: 1em;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .skeleton-chart {
+            width: 100%;
+            height: 300px;
+            margin: 1rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .skeleton-input {
+            width: 100%;
+            height: 40px;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .skeleton-select {
+            width: 150px;
+            height: 30px;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .skeleton-button {
+            width: 120px;
+            height: 40px;
+            margin: 1rem auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+        }
+
+        .hide-skeleton {
+            display: none !important;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+            opacity: 1;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.3s ease-out;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Skeleton states for components */
+        .loading-state .real-content {
+            display: none;
+        }
+
+        .loading-state .skeleton-content {
+            display: block;
+        }
+
+        .loaded-state .real-content {
+            display: block;
+        }
+
+        .loaded-state .skeleton-content {
+            display: none;
+        }
+
+        /* Estilos para o Modal dos Fundadores */
+        .modal-content {
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .founders-divider {
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+
+        .founders-row {
+            margin-top: 2rem;
+        }
+
+        .founder-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .founder-image-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 70, 173, 0.2);
+            position: relative;
+        }
+
+        .founder-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: relative;
+            background-color: #f8f9fa;
+        }
+
+        .founder-card:first-child .founder-image {
+            transform: scale(0.85);
+        }
+
+        @media (max-width: 768px) {
+            .founder-card {
+                margin-bottom: 2rem;
+            }
+
+            .founder-image-wrapper {
+                width: 150px;
+                height: 150px;
+            }
+
+            .founders-story {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Founders Modal Styles */
+        .founder-card {
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-image-wrapper {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .founder-card:hover .founder-image {
+            transform: scale(1.05);
+        }
+
+        .founder-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .founder-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .founder-social {
+            margin-top: 5px;
+        }
+
+        .founder-social a {
+            color: #6c757d;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .founder-social a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .story-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #505965;
+        }
+
+        #foundersModal .modal-content {
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        #foundersModal .modal-header {
+            padding: 1.5rem 1.5rem 0.5rem;
+            border-bottom: none;
+            background: linear-gradient(to right, rgba(var(--primary-rgb), 0.05), rgba(var(--primary-rgb), 0.1));
+        }
+
+        #foundersModal .modal-body {
+            padding: 1.5rem;
+        }
+
+        .story-text-container {
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 15px;
+            margin-top: 10px;
+        }
+
+        .story-text-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .story-text-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .story-text-container::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .story-text-container::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color-dark);
+        }
+
+        /* Responsive Media Queries */
+        /* Extra small devices (phones, 320px and up) */
+        @media (min-width: 320px) {
+            .brand-text {
+                font-size: 1rem;
+            }
+            
+            .logo, .navbar-brand img {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .hero {
+                padding: 1.5rem 0;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1rem;
+            }
+            
+            .converter-card {
+                margin-top: -30px;
+                padding: 1rem;
+            }
+            
+            .swap-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.75rem;
+            }
+            
+            .crypto-icon {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .form-control {
+                font-size: 1rem;
+            }
+            
+            .chart-wrapper {
+                height: 300px;
+            }
+            
+            .btn-group .btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .social-icons-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            .brand-text {
+                font-size: 1.1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1.1rem;
+            }
+            
+            .converter-card {
+                padding: 1.25rem;
+            }
+            
+            .social-icons-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            .brand-text {
+                font-size: 1.2rem;
+            }
+            
+            .logo, .navbar-brand img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+                border-bottom-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1.2rem;
+            }
+            
+            .converter-card {
+                margin-top: -40px;
+                padding: 1.5rem;
+            }
+            
+            .swap-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .chart-wrapper {
+                height: 350px;
+            }
+            
+            .btn-group .btn {
+                padding: 0.375rem 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            .brand-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo, .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .hero {
+                padding: 2.5rem 0;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p.lead {
+                font-size: 1.3rem;
+            }
+            
+            .converter-card {
+                margin-top: -50px;
+                padding: 2rem;
+            }
+            
+            .swap-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .chart-wrapper {
+                height: 400px;
+            }
+            
+            .btn-group .btn {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .brand-text {
+                font-size: 1.5rem;
+            }
+            
+            .logo, .navbar-brand img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Fix for iPhone X, 11, 12, 13 notch */
+        @supports (padding: max(0px)) {
+            .navbar {
+                padding-left: max(1rem, env(safe-area-inset-left));
+                padding-right: max(1rem, env(safe-area-inset-right));
+            }
+            
+            .container {
+                padding-left: max(15px, env(safe-area-inset-left));
+                padding-right: max(15px, env(safe-area-inset-right));
+            }
+        }
+
+        /* Ensure inputs are properly sized on mobile */
+        input, select, textarea {
+            font-size: 16px !important; /* Prevents iOS zoom on focus */
+        }
+
+        /* Fix for tables on small screens */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+        }
+
+        /* Ensure buttons are large enough for touch */
+        .btn {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Ensure proper spacing for touch targets */
+        .nav-link, .dropdown-item {
+            padding: 0.5rem 1rem;
+        }
+
+        /* Fix for dropdown menus on mobile */
+        .dropdown-menu {
+            min-width: 200px;
+        }
+
+        /* Responsive adjustments for converter section */
+        @media (max-width: 576px) {
+            .converter-section {
+                padding: 1rem 0;
+            }
+            
+            .converter-card {
+                padding: 1rem;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.75rem;
+            }
+            
+            .crypto-icon {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            }
+            
+            .crypto-select {
+                max-width: 90px;
+                font-size: 0.9rem;
+            }
+            
+            .form-control {
+                font-size: 1rem;
+            }
+            
+            .swap-icon {
+                margin: 0.5rem auto;
+            }
+            
+            .chart-container {
+                padding: 1rem;
+            }
+            
+            .chart-wrapper {
+                height: 250px;
+            }
+            
+            .btn-group .btn {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+                margin: 0.15rem;
+            }
+            
+            .ticker-item {
+                margin-right: 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Adjustments for iPhone X and newer models with notch */
+        @media screen and (device-width: 375px) and (device-height: 812px),
+               screen and (device-width: 390px) and (device-height: 844px),
+               screen and (device-width: 428px) and (device-height: 926px),
+               screen and (device-width: 430px) and (device-height: 932px),
+               screen and (device-width: 393px) and (device-height: 852px) {
+            .navbar {
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: 0.5rem;
+            }
+            
+            .container {
+                padding-left: max(15px, env(safe-area-inset-left));
+                padding-right: max(15px, env(safe-area-inset-right));
+            }
+            
+            .hero {
+                padding-top: 1rem;
+            }
+        }
+
+        /* Ensure all images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Responsive adjustments for FAQ section */
+        .accordion-button {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+        
+        .accordion-body {
+            padding: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 576px) {
+            .accordion-button {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+            
+            .accordion-body {
+                padding: 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Responsive adjustments for About Us section */
+        .founder-card {
+            margin-bottom: 2rem;
+        }
+        
+        .founder-image-wrapper {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .founder-card {
+                margin-bottom: 2.5rem;
+            }
+            
+            .founder-image-wrapper {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 1rem;
+            }
+            
+            .founder-name {
+                font-size: 1.25rem;
+            }
+            
+            .founder-title {
+                font-size: 0.9rem;
+            }
+            
+            .founders-story p {
+                font-size: 0.9rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            #foundersModal .modal-dialog {
+                max-width: 95%;
+                margin: 10px auto;
+            }
+            
+            #foundersModal .founder-image-wrapper {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 12px;
+            }
+            
+            #foundersModal .story-text-container {
+                max-height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .founder-image-wrapper {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .founder-name {
+                font-size: 1.1rem;
+            }
+            
+            .founder-title {
+                font-size: 0.85rem;
+            }
+            
+            #foundersModal .founder-image-wrapper {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+            
+            #foundersModal .founder-name {
+                font-size: 1.1rem;
+            }
+            
+            #foundersModal .founder-title {
+                font-size: 0.85rem;
+            }
+            
+            #foundersModal .modal-header {
+                padding: 1.25rem 1.25rem 0.5rem;
+            }
+            
+            #foundersModal .modal-body {
+                padding: 1rem;
+            }
+            
+            #foundersModal .story-text-container {
+                max-height: 180px;
+            }
+        }
+        
+        /* Responsive adjustments for Footer */
+        .footer {
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .footer-link {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding: 2rem 0 1rem;
+                text-align: center;
+            }
+            
+            .footer-heading {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                margin-top: 1.5rem;
+            }
+            
+            .footer-link {
+                font-size: 0.9rem;
+            }
+            
+            .footer-col {
+                margin-bottom: 1.5rem;
+            }
+            
+            .social-media-footer {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer {
+                padding: 1.5rem 0 1rem;
+            }
+            
+            .footer-heading {
+                font-size: 1rem;
+            }
+            
+            .footer-link {
+                font-size: 0.85rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-text {
+                margin-bottom: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Fix for ticker on small screens */
+        @media (max-width: 576px) {
+            .ticker {
+                animation: ticker 20s linear infinite;
+            }
+            
+            .ticker-item {
+                margin-right: 15px;
+                font-size: 0.8rem;
+            }
+            
+            .ticker-item img {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+        }
+
+        /* Fix for social media section on small screens */
+        @media (max-width: 576px) {
+            .social-media-section {
+                padding: 15px;
+            }
+            
+            .social-title {
+                font-size: 1rem;
+            }
+            
+            .social-description {
+                font-size: 0.8rem;
+            }
+            
+            .social-icon {
+                padding: 8px;
+                font-size: 16px;
+            }
+        }
+
+        /* Mobile-specific improvements */
+        @media (max-width: 480px) {
+            /* Improve tap targets */
+            .nav-link, .btn, .dropdown-item, a {
+                padding: 0.5rem;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Adjust font sizes for better readability */
+            body {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .lead {
+                font-size: 1rem !important;
+            }
+            
+            /* Improve converter layout */
+            .crypto-input, .crypto-output {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .d-flex.align-items-center {
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Ensure proper spacing */
+            .py-5 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            .my-5 {
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            /* Fix for navbar on very small screens */
+            .navbar-brand {
+                max-width: 70%;
+            }
+            
+            /* Improve chart responsiveness */
+            canvas {
+                max-height: 250px;
+            }
+        }
+
+        /* iPhone SE and other very small devices */
+        @media (max-width: 375px) {
+            .brand-text span {
+                font-size: 0.9rem;
+            }
+            
+            .navbar-brand img, .logo {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem !important;
+            }
+            
+            .hero p.lead {
+                font-size: 0.9rem !important;
+            }
+            
+            .converter-card {
+                padding: 0.75rem;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.5rem;
+            }
+            
+            .form-control {
+                font-size: 0.9rem;
+            }
+            
+            .crypto-select {
+                max-width: 80px;
+                font-size: 0.8rem;
+            }
+            
+            .crypto-icon {
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+            }
+            
+            .swap-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            
+            .btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .chart-wrapper {
+                height: 200px;
+            }
+        }
+
+        /* Dispositivos extremamente pequenos (320px e menores) */
+        @media (max-width: 320px) {
+            .navbar {
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .navbar-brand {
+                max-width: 65%;
+            }
+            
+            .brand-text span {
+                font-size: 0.8rem;
+            }
+            
+            .navbar-brand img, .logo {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .hero {
+                padding: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.3rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .hero p.lead {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .converter-card {
+                margin-top: -25px;
+                padding: 0.5rem;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.4rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .form-control {
+                font-size: 0.8rem;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .crypto-select {
+                max-width: 70px;
+                font-size: 0.75rem;
+            }
+            
+            .crypto-icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 3px;
+            }
+            
+            .swap-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                margin: 0.25rem auto;
+            }
+            
+            .btn {
+                padding: 0.2rem 0.4rem;
+                font-size: 0.75rem;
+                min-height: 36px;
+            }
+            
+            .chart-wrapper {
+                height: 180px;
+            }
+            
+            h2, .h2 {
+                font-size: 1.2rem !important;
+            }
+            
+            h3, .h3 {
+                font-size: 1rem !important;
+            }
+            
+            p {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .accordion-button {
+                padding: 0.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .accordion-body {
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+            
+            .py-5 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            
+            .my-5 {
+                margin-top: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .footer-heading {
+                font-size: 0.9rem;
+            }
+            
+            .footer-link {
+                font-size: 0.75rem;
+            }
+            
+            .footer-bottom-text {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Melhorias na disposição dos elementos para todos os tamanhos */
+        .converter-section {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .converter-card {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        /* Melhorar a visualização do conversor em dispositivos pequenos */
+        @media (max-width: 576px) {
+            .crypto-input, .crypto-output {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .crypto-input .d-flex, .crypto-output .d-flex {
+                margin-bottom: 0.5rem;
+            }
+            
+            .form-control {
+                text-align: center;
+                padding: 0.5rem;
+                margin-top: 0.25rem;
+            }
+            
+            /* Melhorar a visualização do ticker em telas pequenas */
+            .ticker-container {
+                height: auto;
+                padding: 0.5rem 0;
+            }
+            
+            .ticker {
+                animation-duration: 20s;
+            }
+            
+            /* Melhorar a visualização dos botões do gráfico */
+            .btn-group {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.25rem;
+                width: 100%;
+            }
+            
+            .btn-group .btn {
+                margin: 0;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* Melhorar a visualização do FAQ em dispositivos pequenos */
+        @media (max-width: 480px) {
+            .accordion-button {
+                align-items: flex-start;
+            }
+            
+            .accordion-button::after {
+                margin-top: 0.25rem;
+            }
+            
+            /* Melhorar a visualização das seções */
+            section {
+                margin-bottom: 1.5rem;
+            }
+            
+            /* Melhorar a visualização dos fundadores */
+            .founder-card {
+                padding: 1rem;
+            }
+            
+            .founder-image-wrapper {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        /* Otimizar o espaçamento para dispositivos pequenos */
+        @media (max-width: 400px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            .row {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            
+            .row > [class^="col-"] {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        /* Melhorar a visualização em dispositivos com telas largas mas baixas (modo paisagem em celulares) */
+        @media (max-height: 450px) and (orientation: landscape) {
+            .navbar {
+                padding: 0.25rem 1rem;
+            }
+            
+            .hero {
+                padding: 0.75rem 0;
+            }
+            
+            .converter-card {
+                margin-top: -20px;
+            }
+            
+            .chart-wrapper {
+                height: 150px;
+            }
+            
+            .py-5 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            .my-5 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .footer {
+                padding: 1rem 0 0.5rem;
+            }
+        }
+
+        /* Melhorar a acessibilidade para dispositivos com tela sensível ao toque */
+        @media (pointer: coarse) {
+            .nav-link, .btn, .dropdown-item, select, input, a {
+                min-height: 44px;
+            }
+            
+            /* Aumentar área de toque para elementos interativos */
+            .crypto-select, .form-control {
+                min-height: 44px;
+            }
+            
+            .swap-icon {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+
+        /* Otimizar para dispositivos com alta densidade de pixels */
+        @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+            .crypto-icon, img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Otimizações adicionais para o conversor */
+        .crypto-input, .crypto-output {
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .crypto-input:focus-within, .crypto-output:focus-within {
+            box-shadow: 0 0 0 2px rgba(0, 70, 173, 0.2);
+        }
+        
+        /* Melhorar a visualização do conversor em dispositivos pequenos */
+        @media (max-width: 576px) {
+            /* Layout otimizado para o conversor */
+            .converter-card {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .crypto-input, .crypto-output {
+                margin-bottom: 0.75rem;
+            }
+            
+            /* Melhorar a visualização do botão de troca */
+            .swap-container {
+                display: flex;
+                justify-content: center;
+                margin: 0.5rem 0;
+            }
+            
+            /* Melhorar a visualização do resultado */
+            .result-container {
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+            
+            /* Melhorar a visualização das taxas */
+            .rate-info {
+                text-align: center;
+                font-size: 0.8rem;
+                margin-top: 0.5rem;
+            }
+        }
+        
+        /* Melhorar a visualização do gráfico em dispositivos pequenos */
+        @media (max-width: 480px) {
+            .chart-title {
+                font-size: 1rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .chart-controls {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .chart-period-selector {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        /* Melhorar a visualização do ticker em dispositivos pequenos */
+        @media (max-width: 400px) {
+            .ticker-item {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                margin-right: 15px;
+            }
+            
+            .ticker-item img {
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+            }
+            
+            .ticker-item .ticker-price {
+                font-weight: 500;
+            }
+            
+            .ticker-item .ticker-change {
+                font-size: 0.75rem;
+                margin-left: 4px;
+            }
+        }
+        
+        /* Melhorar a visualização do FAQ em dispositivos pequenos */
+        @media (max-width: 400px) {
+            .accordion-button {
+                font-size: 0.85rem;
+                padding: 0.6rem;
+            }
+            
+            .accordion-body {
+                font-size: 0.8rem;
+                padding: 0.6rem;
+            }
+            
+            .accordion-button::after {
+                width: 0.8rem;
+                height: 0.8rem;
+                background-size: 0.8rem;
+            }
+        }
+        
+        /* Melhorar a visualização dos fundadores em dispositivos pequenos */
+        @media (max-width: 400px) {
+            .founder-card {
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            
+            .founder-image-wrapper {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0.75rem;
+            }
+            
+            .founder-name {
+                font-size: 1rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .founder-title {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .founder-social {
+                margin-top: 0.5rem;
+            }
+            
+            .founder-social a {
+                font-size: 0.9rem;
+                margin: 0 0.25rem;
+            }
+            
+            #foundersModal .modal-content {
+                border-radius: 12px;
+            }
+            
+            #foundersModal .modal-header {
+                padding: 1rem 1rem 0.25rem;
+            }
+            
+            #foundersModal .modal-body {
+                padding: 0.75rem;
+            }
+            
+            #foundersModal .founder-image-wrapper {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 8px;
+            }
+            
+            #foundersModal .founder-name {
+                font-size: 1rem;
+                margin-bottom: 2px;
+            }
+            
+            #foundersModal .founder-title {
+                font-size: 0.8rem;
+                margin-bottom: 5px;
+            }
+            
+            #foundersModal .story-text-container {
+                max-height: 150px;
+                padding-right: 10px;
+            }
+        }
+        
+        /* Melhorar a visualização do footer em dispositivos pequenos */
+        @media (max-width: 400px) {
+            .footer {
+                padding: 1.25rem 0 0.75rem;
+            }
+            
+            .footer-col {
+                margin-bottom: 1rem;
+            }
+            
+            .footer-heading {
+                margin-bottom: 0.75rem;
+            }
+            
+            .footer-link {
+                margin-bottom: 0.4rem;
+            }
+            
+            .footer-bottom {
+                margin-top: 0.75rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Melhorar a visualização em dispositivos com notch */
+        @supports (padding-top: env(safe-area-inset-top)) {
+            .navbar {
+                padding-top: max(0.5rem, env(safe-area-inset-top));
+                padding-left: max(1rem, env(safe-area-inset-left));
+                padding-right: max(1rem, env(safe-area-inset-right));
+            }
+            
+            .container {
+                padding-left: max(15px, env(safe-area-inset-left));
+                padding-right: max(15px, env(safe-area-inset-right));
+            }
+            
+            .fixed-bottom {
+                padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+            }
+        }
+        
+        /* Melhorar a visualização em dispositivos com tela dobrável */
+        @media (min-aspect-ratio: 2/1) {
+            .hero {
+                padding: 1.5rem 0;
+            }
+            
+            .converter-card {
+                margin-top: -30px;
+            }
+            
+            .chart-wrapper {
+                height: 250px;
+            }
+        }
+        
+        /* Otimizações para dispositivos com tela muito pequena em modo paisagem */
+        @media (max-height: 350px) and (orientation: landscape) {
+            .navbar {
+                padding: 0.2rem 0.5rem;
+            }
+            
+            .hero {
+                padding: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero p.lead {
+                font-size: 0.8rem !important;
+            }
+            
+            .converter-card {
+                margin-top: -15px;
+                padding: 0.5rem;
+            }
+            
+            .chart-wrapper {
+                height: 120px;
+            }
+            
+            .py-5 {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            
+            .my-5 {
+                margin-top: 0.75rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            
+            .footer {
+                padding: 0.75rem 0 0.5rem;
+            }
+        }
+
+        .founders-story {
+            background-color: rgba(var(--primary-rgb), 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .story-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .story-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .story-text-container {
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 15px;
+            margin-top: 10px;
+        }
+
+        /* Logo visibility control for very small screens */
+        @media (max-width: 360px) {
+            .navbar-brand .logo {
+                display: none;
+            }
+            
+            .navbar-brand {
+                gap: 0;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .brand-text {
+                font-size: 0.9rem;
+            }
+            
+            .navbar-brand {
+                max-width: 100%;
+            }
+        }
+
+        /* Add this to your CSS styles */
+        .convert-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 0.75rem 2.5rem;
+            box-shadow: 0 4px 15px rgba(0, 70, 173, 0.3);
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            display: block !important; /* Always display the button */
+            min-width: 200px;
+        }
+
+        .convert-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 70, 173, 0.4);
+            background-color: #003d94;
+            color: var(--white);
+        }
+
+        .convert-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(0, 70, 173, 0.3);
+        }
+
+        /* Responsive adjustments for the convert button */
+        @media (max-width: 576px) {
+            .convert-btn {
+                font-size: 1rem;
+                padding: 0.6rem 2rem;
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .convert-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem 1.5rem;
+                min-width: 160px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .convert-btn {
+                font-size: 0.85rem;
+                padding: 0.5rem 1.25rem;
+                min-width: 140px;
+                width: 90%;
+                margin: 0.5rem auto;
+            }
+        }
+
+        /* Chart responsive adjustments */
+        @media (max-width: 992px) {
+            .chart-section {
+                padding: 2.5rem 0;
+            }
+            
+            .chart-container {
+                padding: 1.25rem;
+            }
+            
+            .chart-wrapper {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chart-section {
+                padding: 2rem 0;
+            }
+            
+            .chart-container {
+                padding: 1rem;
+                border-radius: 0.75rem;
+            }
+            
+            .chart-wrapper {
+                height: 300px;
+            }
+            
+            .chart-container h5 {
+                font-size: 1rem;
+            }
+            
+            /* Melhor espaçamento para rótulos de gráfico */
+            canvas {
+                height: 100% !important;
+            }
+        }
+        
+        /* Ajustes para melhorar a exibição das datas nos gráficos em telas pequenas */
+        @media (max-width: 576px) {
+            /* Reduz o número de rótulos de eixo x visíveis */
+            canvas {
+                height: 100% !important;
+            }
+            
+            /* A cada 2 pontos de dados, mostra apenas 1 rótulo */
+            .chart-wrapper .chartjs-size-monitor {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .chart-wrapper {
+                height: 280px;
+            }
+        }
+        
+        /* Ajustes extremos para telas muito pequenas */
+        @media (max-width: 400px) {
+            .chart-wrapper {
+                height: 250px;
+            }
+            
+            /* Redução adicional de rótulos em telas muito pequenas */
+            .chart-container {
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chart-section {
+                padding: 1.5rem 0;
+            }
+            
+            .chart-container {
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+            }
+            
+            .chart-wrapper {
+                height: 250px;
+            }
+            
+            .chart-container h5 {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .btn-group {
+                flex-wrap: nowrap;
+            }
+            
+            .btn-group .btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+                border-radius: 0.25rem;
+            }
+            
+            .d-flex.justify-content-between.align-items-center {
+                flex-direction: column;
+                align-items: center !important;
+                gap: 10px;
+            }
+            
+            .d-flex.justify-content-between.align-items-center h5 {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .chart-section {
+                padding: 1.25rem 0;
+            }
+            
+            .chart-wrapper {
+                height: 200px;
+            }
+            
+            .chart-container h5 {
+                font-size: 0.85rem;
+            }
+            
+            .btn-group .btn {
+                padding: 0.2rem 0.4rem;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .chart-section {
+                padding: 1rem 0;
+            }
+            
+            .chart-wrapper {
+                height: 180px;
+            }
+            
+            .chart-container h5 {
+                font-size: 0.8rem;
+            }
+            
+            .btn-group .btn {
+                padding: 0.15rem 0.3rem;
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Converter card responsive adjustments */
+        @media (max-width: 992px) {
+            .converter-card {
+                margin-top: -40px;
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .converter-card {
+                margin-top: -35px;
+                padding: 1.25rem;
+                border-radius: 15px;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.9rem;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .converter-card {
+                margin-top: -30px;
+                padding: 1rem;
+                border-radius: 15px;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.8rem;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .crypto-input .d-flex, .crypto-output .d-flex {
+                margin-bottom: 0.5rem;
+            }
+            
+            .form-control {
+                text-align: center;
+                padding: 0.5rem;
+                margin-top: 0.25rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .converter-card {
+                margin-top: -25px;
+                padding: 0.9rem;
+                border-radius: 12px;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.7rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .swap-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                margin: 0.5rem auto;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .converter-card {
+                margin-top: -20px;
+                padding: 0.8rem;
+                border-radius: 10px;
+            }
+            
+            .crypto-input, .crypto-output {
+                padding: 0.6rem;
+                margin-bottom: 0.7rem;
+                border-radius: 8px;
+            }
+            
+            .swap-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+                margin: 0.4rem auto;
+            }
+            
+            .form-control {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Add this to your CSS styles */
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--white);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments for social links */
+        @media (max-width: 576px) {
+            .social-link {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .social-link {
+                width: 26px;
+                height: 26px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .founder-social {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 20px;
+                padding: 3px 5px;
+            }
+            
+            .social-link {
+                width: 24px;
+                height: 24px;
+                font-size: 0.75rem;
+            }
+            
+            .founder-card {
+                position: relative;
+                padding-top: 1.5rem !important;
+            }
+        }
+
+        /* Add this to your CSS styles */
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1050;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            width: 1.3em;
+            height: 1.3em;
+        }
+
+        /* Responsive adjustments for navbar toggler */
+        @media (max-width: 576px) {
+            .navbar-toggler {
+                padding: 0.4rem;
+            }
+            
+            .navbar-toggler-icon {
+                width: 1.2em;
+                height: 1.2em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-toggler {
+                padding: 0.35rem;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .navbar-toggler-icon {
+                width: 1.1em;
+                height: 1.1em;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .navbar-toggler {
+                display: none !important; /* Hide the navbar toggle on very small screens */
+            }
+            
+            .navbar > .container {
+                position: relative;
+            }
+        }
+
+        /* Only show FAB on very small screens */
+        @media (min-width: 321px) {
+            .floating-action-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .floating-action-btn {
+                display: block !important;
+                z-index: 1060; /* Higher z-index to ensure it's above other elements */
+            }
+            
+            /* Make the FAB more prominent */
+            .fab-main {
+                width: 50px;
+                height: 50px;
+                background-color: var(--primary);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+            
+            .fab-main:hover {
+                background-color: #003d94;
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+            }
+            
+            /* Enhance the convert button in the FAB */
+            .fab-convert {
+                background-color: var(--secondary) !important;
+                color: var(--dark) !important;
+                border-color: var(--secondary) !important;
+                font-weight: 600;
+                width: 38px;
+                height: 38px;
+                box-shadow: 0 4px 10px rgba(90, 229, 0, 0.3);
+            }
+            
+            .fab-convert:hover {
+                background-color: #4ac500 !important;
+                color: var(--dark) !important;
+                box-shadow: 0 6px 15px rgba(90, 229, 0, 0.4);
+            }
+            
+            /* Hide navbar toggle on very small screens */
+            .navbar-toggler {
+                display: none !important;
+            }
+        }
+
+        /* Add this to your CSS styles */
+        .dropdown-menu {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            min-width: 180px;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            background-color: rgba(0, 70, 173, 0.1);
+        }
+
+        .dropdown-item img {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive adjustments for dropdown menu */
+        @media (max-width: 576px) {
+            .dropdown-menu {
+                min-width: 160px;
+                padding: 0.4rem;
+                margin-top: 0.4rem;
+            }
+            
+            .dropdown-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .dropdown-menu {
+                min-width: 150px;
+                padding: 0.3rem;
+                margin-top: 0.3rem;
+                position: fixed;
+                right: 10px !important;
+                left: auto !important;
+            }
+            
+            .dropdown-item {
+                padding: 0.35rem 0.7rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .dropdown-menu {
+                min-width: 140px;
+                padding: 0.25rem;
+                right: 5px !important;
+            }
+            
+            .dropdown-item {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.8rem;
+            }
+            
+            .dropdown-item img {
+                margin-right: 5px;
+                height: 10px !important;
+            }
+        }
+
+        /* Fix for navbar dropdown on small screens */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: var(--primary);
+                border-radius: 0 0 15px 15px;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            
+            .navbar-nav {
+                padding-bottom: 0.5rem;
+            }
+            
+            .nav-item {
+                margin-bottom: 0.25rem;
+            }
+            
+            .nav-link {
+                border-radius: 8px;
+                padding: 0.5rem 1rem;
+            }
+            
+            .nav-link:hover, .nav-link:focus {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            .dropdown-menu {
+                background-color: rgba(255, 255, 255, 0.95);
+                margin-top: 0.25rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-collapse {
+                padding: 0.75rem;
+                border-radius: 0 0 12px 12px;
+            }
+            
+            .nav-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .navbar-collapse {
+                padding: 0.5rem;
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .nav-link {
+                padding: 0.35rem 0.7rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Add this to your CSS styles */
+        .floating-action-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1040;
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Em telas menores que 361px, o FAB aparece imediatamente */
+        @media (max-width: 360px) {
+            .floating-action-btn {
+                display: block !important;
+                opacity: 1 !important;
+                transform: scale(1) !important;
+                transition: none !important;
+                animation: none !important;
+                bottom: 15px !important;
+                right: 15px !important;
+                z-index: 9999 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+            }
+            
+            .fab-options {
+                transition: none !important;
+                animation: none !important;
+            }
+            
+            .fab-main {
+                width: 50px !important;
+                height: 50px !important;
+                background-color: var(--primary) !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+                border: 2px solid rgba(255, 255, 255, 0.2) !important;
+                transition: none !important;
+                animation: none !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            
+            .fab-option {
+                transition: none !important;
+                animation: none !important;
+            }
+            
+            /* Ocultar a navbar em telas pequenas */
+            .navbar {
+                display: none !important;
+            }
+            
+            /* Ajustar o hero para compensar a ausência da navbar */
+            .hero {
+                padding-top: 2rem !important;
+                border-top-left-radius: 0 !important;
+                border-top-right-radius: 0 !important;
+            }
+        }
+
+        .fab-main {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fab-main:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fab-main:hover:after {
+            opacity: 1;
+        }
+
+        .fab-main:hover {
+            background-color: #003d94;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .fab-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fab-option:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,70,173,0.2) 0%, rgba(0,70,173,0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fab-option:hover:after {
+            opacity: 1;
+        }
+
+        .fab-option:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Only show FAB on very small screens */
+        @media (max-width: 576px) {
+            .floating-action-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .floating-action-btn {
+                display: block;
+            }
+        }
+
+        .fab-options {
+            position: absolute;
+            bottom: 70px;
+            right: 8px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .fab-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fab-option:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,70,173,0.2) 0%, rgba(0,70,173,0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fab-option:hover:after {
+            opacity: 1;
+        }
+
+        .fab-option:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Only show on small screens */
+        @media (max-width: 576px) {
+            .floating-action-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .fab-main {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+            
+            .fab-option {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            
+            .floating-action-btn {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .fab-main {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .fab-option {
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+            }
+            
+            .floating-action-btn {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .fab-options {
+                gap: 12px;
+                bottom: 60px;
+            }
+        }
+
+        /* Update the convert button to hide on very small screens */
+        @media (max-width: 320px) {
+            /* #convert-btn {
+                display: none !important;
+            } */
+            
+            /* Remove convert button from FAB options - no longer needed */
+            /* .fab-convert {
+                background-color: var(--secondary) !important;
+                color: var(--dark) !important;
+                border-color: var(--secondary) !important;
+                font-weight: 600;
+            }
+            
+            .fab-convert:hover {
+                background-color: #4ac500 !important;
+                color: var(--dark) !important;
+            } */
+        }
+
+        .fab-options.show {
+            display: flex;
+        }
+
+        /* Final overrides to ensure correct display of navbar toggle and FAB */
+        @media (max-width: 320px) {
+            .navbar-toggler {
+                display: none !important;
+            }
+            
+            .floating-action-btn {
+                display: block !important;
+                z-index: 1060;
+            }
+        }
+        
+        @media (min-width: 321px) {
+            .floating-action-btn {
+                display: none !important;
+            }
+            
+            .navbar-toggler {
+                display: block;
+            }
+        }
+
+        /* Update the convert button to always be visible */
+        @media (max-width: 320px) {
+            #convert-btn {
+                display: block !important; /* Ensure convert button is always visible */
+            }
+        }
+
+        /* Center the brand text when logo disappears */
+        @media (max-width: 360px) {
+            .navbar-brand .logo {
+                display: none;
+            }
+            
+            .navbar-brand {
+                gap: 0;
+                width: 100%;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                text-align: center;
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+            
+            .brand-text {
+                justify-content: center;
+                margin: 0 auto;
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+            
+            .navbar > .container {
+                justify-content: center;
+                position: relative;
+            }
+        }
+
+        /* Final adjustments for very small screens */
+        @media (max-width: 320px) {
+            /* Ensure navbar brand is properly centered */
+            .navbar > .container {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                padding: 0.5rem 0;
+            }
+            
+            .navbar-brand {
+                margin: 0 auto;
+                padding: 0;
+            }
+            
+            /* Ensure convert button is always visible */
+            #convert-btn {
+                display: block !important;
+                margin: 0.75rem auto;
+            }
+            
+            /* Adjust spacing for better appearance */
+            .converter-card {
+                padding-top: 1rem;
+            }
+        }
+
+        /* Final overrides to ensure correct display of navbar toggle and FAB */
+        .collapsing {
+            transition: height 0.35s ease;
+        }
+
+        /* Fix for navbar-collapse animation */
+        .navbar-collapse {
+            transition: height 0.35s ease;
+        }
+        
+        /* Garantir que o texto da marca não seja afetado pelas transições do navbar-collapse */
+        @media (max-width: 360px) {
+            .navbar-collapse.collapsing, 
+            .navbar-collapse.show, 
+            .navbar-collapse.collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+
+        /* Garantir que o FAB apareça em todas as telas menores que 361px sem exceção */
+        @media (max-width: 360px) {
+            #floatingActionBtn {
+                display: block !important;
+                opacity: 1 !important;
+                transform: scale(1) !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+                z-index: 9999 !important;
+                bottom: 15px !important;
+                right: 15px !important;
+                position: fixed !important;
+            }
+            
+            /* Modificação: manter o navbar, apenas simplificando */
+            .navbar {
+                display: flex !important;
+                padding: 0.3rem 0.5rem !important;
+                justify-content: center !important;
+                height: 50px !important;
+                position: relative !important;
+                z-index: 1030 !important;
+            }
+            
+            /* Esconder elementos desnecessários na navbar */
+            .navbar-toggler {
+                display: none !important;
+            }
+            
+            /* Garantir que a logo e o CCM fiquem visíveis e próximos */
+            .navbar-brand {
+                margin: 0 !important;
+                padding: 0 !important;
+                justify-content: center !important;
+                width: auto !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 10px !important; /* Reduzir o espaço entre o logo e o texto */
+            }
+            
+            .logo {
+                display: flex !important;
+                width: 32px !important;
+                height: 32px !important;
+                margin-right: 0 !important;
+                overflow: hidden !important;
+                border-radius: 50% !important;
+                justify-content: center !important;
+                align-items: center !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .logo img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 50% !important;
+            }
+            
+            /* Esconder texto completo e mostrar apenas CCM */
+            .brand-text-full {
+                display: none !important;
+            }
+            
+            .brand-text-short {
+                display: inline !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                letter-spacing: 0.2px !important; /* Reduzir o espaçamento entre letras */
+                color: var(--white) !important;
+                white-space: nowrap !important;
+            }
+            
+            /* Esconder dropdown e links do menu */
+            .navbar-collapse {
+                display: none !important;
+            }
+            
+            /* Ajuste para o hero começar logo abaixo da navbar simplificada */
+            .hero {
+                padding-top: 1.5rem !important;
+                margin-top: 0 !important;
+                border-top-left-radius: 0 !important;
+                border-top-right-radius: 0 !important;
+            }
+            
+            /* Ajustar o container da navbar para acomodar corretamente */
+            .navbar > .container {
+                padding: 0 !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+        }
+    </style>
