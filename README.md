@@ -2,8 +2,6 @@
 
 O **Conversor de Criptomoedas** é uma ferramenta prática e intuitiva desenvolvida para ajudar usuários a converter valores entre diferentes moedas digitais e moedas tradicionais (como o dólar, euro, kwanza, etc.). Ideal para quem deseja acompanhar o mercado cripto em tempo real, seja para fins de investimento, estudo ou simples curiosidade.
 
-![Image](https://github.com/user-attachments/assets/33c45b50-bbd6-4f3f-8d07-63aed5d86971)
-
 ## 🚀 Funcionalidades
 
 - ✅ Conversão em tempo real entre criptomoedas (Bitcoin, Ethereum, Binance Coin, etc.)
